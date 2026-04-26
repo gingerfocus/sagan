@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID: E22C0F8F-C0E0-4B16-AE86-9E9B9C83A1B8
+:END:
+#+title: csen-prelab-6
+
+--------------
+
+date: 2025-02-18
+author: Evan Stokdyk
+---
+
+Evan Stokdyk
+
+PreLab 6
+
+CSEN 21L - T 2:30
+
+* Problem
+
+#+begin_quote
+The mini-calculator will use a small ALU to perform arithmetic operations on two 4-bit values which are set using switches. The ALU operations described below are implemented with an Adder/Subtractor component. A push button input allows the current arithmetic result to be saved. An upgraded mini-calculator allows the saved value to be used in place of B as one of the operands. - The small ALU that you will design will use the 4-bit adder myadder4 to do several possible operations. The circuit will take two 4-bit input values from switches, a3 a2 a1 a0 and b3 b2 b1 b0, to be the operands. - Four switches, p3, p2, p1, and p0 will specify the arithmetic operation. These four bits can be interpreted as an operation code. The operations are specified in the table below. (Note that p3 = 0 for all table entries below. A new feature for p3=1 will be added in the lab.) - The output will be a 4-bit value r3 r2 r1 r0 and three single bit outputs: a carry out, an arithmetic overflow, and a zero result bit.
+#+end_quote
+
+| p[3:0]  | r[3:0]    | Operation              |
+|---------+-----------+------------------------|
+| 0 0 0 0 | A + B     | Add                    |
+| 0 0 0 1 | A + B + 1 | Add and Increment      |
+| 0 0 1 0 | A - B - 1 | Subtract and Decrement |
+| 0 0 1 1 | A - B     | Subtract               |
+| 0 1 0 0 | A         | Transfer A             |
+| 0 1 0 1 | A + 1     | Increment A            |
+| 0 1 1 0 | A - 1     | Decrement A            |
+| 0 1 1 1 | A         | Transfer A             |
+
+* Questions
+** Part 1: Logic
+A table showing different opcodes and how they affect the input to the adder.
+
+| p[3:0]  | Adder X inputs | Adder Y Inputs  | Carry | Operation         |
+|---------+----------------+-----------------+-------+-------------------|
+| 0 0 0 0 | a3 a2 a1 a0    | b3 b2 b1 b0     | 0     | Add               |
+| 0 0 0 1 | a3 a2 a1 a0    | b3 b2 b1 b0     | 1     | Add and Increment |
+| 0 0 1 0 | a3 a2 a1 a0    | ~b3 ~b2 ~b1 ~b0 | 0     | Sub and Decrement |
+| 0 0 1 1 | a3 a2 a1 a0    | ~b3 ~b2 ~b1 ~b0 | 1     | Sub               |
+
+** Part 2 & 3: Circuit Diagram
+Circuit Diagram showing internal structure to myALU4.
+
+** Part 4: Verilog
+Verilog code that modules the following situation.
+
+#+begin_src verilog
+module myALU4(P, A, B, C0, R, C4, V, Z);
+    input [3:0] P, A, B;
+    input C0;
+    output [3:0] R;
+    output Z, V, C4;
+
+    always @ (*)
+        case({P[1], P[0]})
+          2'b00    : myadder4 u0(A, B, 0, R, C4);
+          2'b01    : myadder4 u1(A, B, 1, R, C4);
+          2'b10    : myadder4 u2(A, {~B[3], ~B[2], ~B[1], ~B[0]}, 0, R, C4);
+          default  : myadder4 u3(A, {~B[3], ~B[2], ~B[1], ~B[0]}, 1, R, C4);
+        endcase
+        assign Z=(~R[0] & ~R[1] & ~R[2] & ~R[3]);
+    end
+    assign V=
+    // C0 is ignored
+endmodule
+#+end_src
+
+** Part 5 & 6: Testing
+To test this circuit, the different possible values to the adders should be tested. This is beacuse there is not internal logic after the adder and it can be assumed to be correct so the output can directly inform what internal error was. For example, checking that the carry bit is being set is a simple as fliping the value of p0. Flipping the value of p1 will invert the B and p2 will set B to 0. As a result, it is better to test all the combinations of P knowing what changes they should result in for a few choice values.
+
+1. Set both A and B to 0x1. Iterate all values of P. This will never overflow but will test basic arithmatic.
+2. Set A to 0xF and B to 0x1. Iterate all values of P. Test a "dangerous" value of A that will often produce sensible results.
+3. Set A to 0x8 and B to 0x7. Iterate all values of P[1:0]. It is not longer necessary to test B as 0 which is why p2 can be ignored.
+4. Set A to 0x1 and B to 0x7. Iterate all values of P[1:0]. This subtraction should result in a negative value and adding should be an overflow.

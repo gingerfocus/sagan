@@ -1,0 +1,36 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Prelab 1", columns: 1, author: "Evan Stokdyk")
+#+END_EXPORT
+
+* Deliverables
+In the lab period, the goal is to demonstrate working code for each problem. It
+is also the goal to understand each in order to create a lab report by next
+class. The report should supplemental include the modified source code.
+
+* Instructions
+In the lab, we see common data instruction as well math instructions. One is MVN
+or move not which as seen on page 67 of the text book inverts the bits of a
+register. Next is LSL or logical shift left which in effect multiplies by powers
+of 2 as seen also on page 67. Finally, ADD adds two registers together. It also
+has complicated overflow behavior which is explained on page 64 and 65.
+
+* Directives
+The assembly directive DCD or define constant word allocate one or more 32 bit
+words. It reserves the space and sets initial content as seen on page 71.
+
+The ALIGN directive align the next data to a memory boundary. This allows
+starting to write data at a byte number divisible by 2^n. The argument n can be
+set but it defaults to 2 which just word aligns. Some processors need this as
+misalignment can cause a fault signal. On the cortex-m it is not but has
+performance implications as it can both take longer or need multiple fetches as
+seen on page 72.
+
+The AREA directive creates a new block of data and can set certain properties
+about it. There needs to be at least one code block in a file. Code must be read
+only and data can be whatever you want, this is explained on page 70. This
+feature is mostly organizational but can have security implications by assuring
+your code cannot be overwritten by a clever hacker. It can also have performance
+implications based on how the kernel chooses to page your data.

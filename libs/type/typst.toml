@@ -1,0 +1,6 @@
+[package]
+name = "type"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Evan Stokdyk"]
+description = "typewriter layout"

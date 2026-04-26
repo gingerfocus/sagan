@@ -1,0 +1,40 @@
+stateDiagram-v2
+    direction TB
+
+    FETCH --> DECODE
+
+    DECODE --> LOAD: operation == 0
+    DECODE --> READ_X: operation == 2 || 6 || 7 || 9 || 10
+    DECODE --> READ_Y: operation == 1 || 3 
+    DECODE --> DISPLAY: operation == 4
+    DECODE --> HALT: operation == 5
+    DECODE --> STORE: operation == 8
+
+    HALT --> HALT: 1
+
+    STORE --> FETCH: 1
+
+    LOAD --> FETCH: 1
+    DISPLAY --> FETCH: 1
+
+    READ_Y --> ADD: operation == 3
+    READ_Y --> MV: operation == 1
+
+    READ_X --> ADDI: operation == 6
+    READ_X --> SUBI: operation == 7
+    READ_X --> SUB: operation == 2
+    READ_X --> BZ: operation == 9
+    READ_X --> BNZ: operation == 10
+
+    BZ --> FETCH
+    BNZ --> FETCH
+
+
+
+    ADD --> WRITE_X: 1
+    SUB --> WRITE_X: 1
+    MV --> WRITE_X: 1
+    ADDI --> WRITE_X: 1
+    SUBI --> WRITE_X: 1
+
+    WRITE_X --> FETCH: 1

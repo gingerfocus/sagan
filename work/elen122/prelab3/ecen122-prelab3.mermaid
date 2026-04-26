@@ -1,0 +1,29 @@
+stateDiagram-v2
+    direction TB
+
+    IDLE --> LOAD: exec == 1 && operation == 000
+    IDLE --> READ_X: exec == 1 && operation == 010
+    IDLE --> READ_Y: exec == 1 && (operation == 001 || operation == 011 || operation == 110 || operation == 111)
+    IDLE --> DISPLAY: exec == 1 && operation == 100
+
+    LOAD --> DONE: 1
+
+    READ_X --> SUB: 1
+    SUB --> WRITE_X: 1
+
+
+    DISPLAY --> DONE: 1
+
+    READ_Y --> ADD: operation == 011
+    READ_Y --> MV: operation == 001
+    READ_Y --> ADDI: operation == 110
+    READ_Y --> SUBI: operation == 111
+
+    ADDI --> DONE: 1
+    SUBI --> DONE: 1
+
+    ADD --> WRITE_X: 1
+    MV --> WRITE_X: 1
+
+    WRITE_X --> DONE: 1
+    DONE --> IDLE: 1

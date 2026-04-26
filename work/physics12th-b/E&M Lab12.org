@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID: 1C83D297-CE55-4D73-BCA6-7D71F1706D5D
+:END:
+#+title: E&M Lab12
+
+​#+AUTHOR: Evan Stokdyk
+​#+DATE: 4/17/23
+​#+TITLE: Lab 12 - LR circuits
+
+- Abstract
+  TODO
+
+- Intro
+  Inductors reduce the rate of change of circuits they are in.
+
+However this is to difficult to time manually as the time constant is too small
+
+This means that we need use a specific device to time this.
+By estimating the resistance of the inductor we can determine the indeductance.
+By doing this in two different ways (w/ and w/o and iron core) this lab can determine if its like a real thing yo. In addition, this allows the lab to test if variable are related in the way there are expected to be.
+
+Overall, the labs goals is to test and verify a model as well as learn some about inductors
+I hypothisis that
+
+- Materials and Methods
+
+In this lab there were a few materials that "?????????". There was an inductor an ampmeter, a DC power supply, an removable iron rod and a logger pro device. By constructing a circuit as shown in the diagram bellow. This allows of the ampmeter to correctly determin the current in the circuit. By setting the samble rate of the device high and closing the switch quickly data could be collected about how the current changed.
+
+TODO make a circuit diagram
+
+- Data
+  Data is too large to display within lab. You can find the full data here:
+  Relevant samples will be provided for context when needed.
+  ​** Without Core
+
+There were 3 trials at three different voltages
+
+​** With Core
+
+​** Resistance
+
+| V   | I    | R           |
+|-----+------+-------------|
+| 0.5 | 0.1  | 5           |
+| 1.7 | 0.35 | 4.857142857 |
+| 2.1 | 0.45 | 4.666666667 |
+| 2.9 | 0.61 | 4.754098361 |
+| 3.4 | 0.72 | 4.722222222 |
+|     | Avg  | 4.800026021 |
+
+- Discussion
+
+- Sources
+  www.desmos.com
+  www.texrender.org
+
+- Acknowledgements
+  Thank you to Mr. Reiner for supplying the lab equipment

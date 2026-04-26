@@ -1,0 +1,103 @@
+:PROPERTIES:
+:ID: 58DB551B-E3C4-4F6C-BC5A-7B53BD302021
+:END:
+#+title: csen-prelab-9
+
+Evan Stokdyk
+
+PreLab 9
+
+CSEN 21L - T 2:30
+date: 2025-02-18
+
+#+begin_quote
+[!tip] Problem
+In this lab, you are going to practice a Mealy machine design with a simple counter that supports pause/resume on the Intel/Altera's DE2-115 board. In addition to reset and clock, the Mealy machine you are to design in this lab session includes two inputs: PR (pause/resume, 1-bit) and Max_Val (6-bit). As output, it displays the current counter value using two 7-segment displays.
+
+This functionality of this machine is as follows: 1) Upon a reset, the counter value is initialized to 0. 2) Then, at each rising edge of the clock signal, the counter value is incremented by 1 until the value reaches the maximum value (specified by the input max_CNT). 3) When PR is asserted (by pressing the push button KEY[0]) during this normal run, the counting should be paused until the same button is pressed again. 4) When the counter reaches the maximum value, it stops incrementing the value and keeps displaying the maximum number until reset. - After reaching the maximum number, adjusting the maximum value (max_CNT) to a smaller value does not make any effects. - After reaching the maximum number, if the maximum value (max_CNT) is adjusted to a bigger value, the counter should start increasing the value again until it reaches the new maximum value.
+
+Note that the target board (Intel/Altera's DE2-115) only includes one oscillator that produces 50 MHz clock signal, which is too fast to be used in our counter example. Therefore, as a first step, you will implement a simple counter-based clock divider circuit that transform the 50 MHz clock signal to 1 Hz. Then, you will implement the Mealy machine (you completed for the pre-lab) in Verilong HDL.
+#+end_quote
+
+* Questions
+** Converting the Clock
+1. \(t_h * T_{CLK} = 1s\)
+2. \(t_h * 20ns = 1s\)
+3. \(t_h = 1s / 20ns\)
+4. \(t_h = 50000000\)
+
+If the counter, counts to 50 million internally it can convert from a 50MHz clock to a 1Hz clock.
+
+** State Transition Table
+For each of the three states defined above, complete the state transition table.
+*** S_Run
+
+|  TR | Condition                | S*       | CntEn |
+| --- | ------------------------ | -------- | ----- |
+|   1 | PR                       | S_Paused |     0 |
+|   2 | PR' (CNT_out < max_CNT)  | S_Run    |     1 |
+|   3 | PR' (CNT_out >= max_CNT) | S_Max    |     0 |
+
+*** S_Paused
+| TR | Condition | S*       | CntEn |
+|----+-----------+----------+-------|
+| 4  | PR'       | S_Paused | 0     |
+| 5  | PR        | S_Run    | 1     |
+
+*** S_Max
+| TR | Condition            | S*    | CntEn |
+|----+----------------------+-------+-------|
+| 6  | (CNT_out >= max_CNT) | S_Max | 0     |
+| 7  | (CNT_out < max_CNT)  | S_Run | 1     |
+
+** Implementation
+#+begin_src verilog
+module lab9_fsm (CLK, RST, PR, CNT, Max_Val, CntEn, S);
+    input CLK, RST; // Clock and Reset
+    input PR; // Pause/Reset
+    input [5:0] CNT; // current counter value
+    input [5:0] Max_Val; // counter maximum value
+    output reg CntEn; // output, CntEn: counter enable
+    output reg [1:0] S; // current state
+    reg [1:0] S_star; // next state
+    parameter [1:0] S_RUN=3'b00, S_PAUSED=3'b01, S_MAX=3'b10;
+    // Flip-flops for state (state memory)
+    always @(posedge CLK or posedge RST)
+        if (RST == 1) S <= S_RUN; // initialization (to S_RUN)
+        else S <= S_star;
+        
+    // Next state logics
+    // input: S, PR, CNT, Max_Val
+    // output: S_star
+    always@(S,PR, CNT, Max_Val) begin
+        case(S)
+        S_RUN:
+            if (PR==1) S_star = S_PAUSED;
+            // ...
+        S_PAUSED:
+            // ...
+        S_MAX:
+            // ...
+        default:
+            // ...
+        endcase
+    end
+    
+    // Output logics
+    // input: S, PR, CNT, Max_Val
+    // output: CntEn
+    always@(S, PR,CNT, Max_Val) begin
+        case(S)
+        S_RUN:
+            if (PR==1) CntEn = 1'b0;
+            // ...
+        S_PAUSED:
+            // ...
+        S_MAX:
+            // ...
+        default:
+            // ...
+        endcase
+    end
+endmodule
+#+end_src

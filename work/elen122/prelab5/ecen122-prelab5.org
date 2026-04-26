@@ -1,0 +1,44 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN122 - Prelab 5", columns: 1, author: "Evan Stokdyk")
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+/Identify the opcode you will be using for the store instruction./
+
+The opcode for the store command will be =4b'1000=
+
+This is not reusing the move command.
+
+* Problem 2
+/Draw out an updated state diagram that accounts for the store instruction, and any other relevant changes./
+
+#+begin_export typst
+#figure(
+  image("ecen122-prelab5-graph.png", width: 80%),
+  caption: [Provided graph from prelab.],
+)
+#+end_export
+
+* Problem 3
+This program reads values from addresses 48, 49, and 50 as Val1, Val2, and Val3.
+It then stores the sum of Val1 and Val2 to the address of Val3. It then adds
+displays the sum of Val1, Val2, and Val3. It finnally halts.
+
+: 0111_0000_0000_1111    // addi_r0_r0_15  // r0=15
+: 0011_0000_0000_0000    // add__r0_r0_r0  // r0=30
+: 0111_0000_0000_1111    // addi_r0_r0_15  // r0=45
+: 0111_0000_0000_0011    // addi_r0_r0_03  // r0=48
+: 0000_0001_0000_0000    // load_r1_r0___  // r1=*r0 
+: 0111_0000_0000_0001    // addi_r0_r0_01  // r0=49
+: 0000_0010_0000_0000    // load_r2_r0___  // r2=*r0 
+: 0111_0000_0000_0001    // addi_r0_r0_01  // r0=50
+: 0000_0011_0000_0000    // load_r3_r0___  // r3=*r0 
+: 0011_0001_0001_0010    // add__r1_r1_r2  // r1=Val1+Val2
+: 1000_0011_0001_0000    // stor_r3_r1___  // *Val3=r1
+: 0011_0001_0001_0011    // add__r1_r1_r3  // r1=Val1+Val2+Val3
+: 0100_0001_0000_0000    // disp_r1______
+: 0101_0000_0000_0000    // halt
+

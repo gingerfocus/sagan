@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID: 08DB4CEF-85D9-40A9-9850-1D6CD64EAF5A
+:END:
+#+title: facilitating-discussion-2
+
+--------------
+
+id: facilitating-discussion-2
+aliases: - Facilitating Discussion Spring
+tags: []
+---
+
+* Facilitating Discussion
+** Heading
+Evan Stokdyk
+Due: 4/10/2024
+Readings: - Jonaitis Art Northwest Coast p.107-120 - Herbert Visual Culture Visual Studies p.1-5
+
+--------------
+
+** Takeaway or Thesis
+Visual Culture and Studies - Everyday objects of the past often are given importance today. - Art history is the same as History unless it privileges the menial.
+
+Northwest Coast Art - Kwakwaka'waka were a group of loosely associated tribes to coordinate together. - They gained wealth through trading after the Spanish left and used potlucks to show it. - There used dancing as a way of communicating status and stories.
+
+--------------
+
+** Important Content
+Visual Culture and Studies - Visual Studies is different from Art History. - Visual Studies focus on more menial objects that are neglected from other research. - There is asetic value in many things not just what is expensive. - Engages problems by focusing on objects not people. - Focus on consumer products which are often not deemed worth in other deciplins.
+
+Northwest Coast Art - Potlucks would contain a display of wealth by the host. - Symbolism of bowls meant to support hierarchy. Size mattered. - Bowls would be brought into marriage as assets. - Masks were used in dances to represent fictional stories. - One of their stories is about a cannibalize who is "tamed" so that the avians can eat the body. - Tseka is a dance season when tradition (religious) hierarchy is disregarded. - Various "actors" illustrated different values such as the warrior spirit.
+
+--------------
+
+** Key Questions
+- How does visual studies "democratize[s] the community" of mundane objects?
+- What are masks dancers attempting to teach?
+- What would motivate the creation of a bowl after someone like Dzonokwa?
+
+--------------
+
+** Image
+#+caption: Big Bowl|600
+[[file:file:big-bowl.png.org][file:big-bowl.png]]
+
+--------------
+
+* In Class
+1. (Ref. pp.1-4 of the Herbert text)---What different use might we have for terms like “visual studies” versus “art,” or other words that bring forward ways to think about imagery, objects, etc.? Do you see any value in creating new terms to describe how we study cultural artifacts?
+
+2. What is the gist of Herbert's commentary? Does Herbert suggest is the intervention that “visual studies” is making with respect to the study of art or artifacts? (That art history perhaps has not done previously...)
+
+3. Ref. Jonaitis, Why are potlatches so significant for NW Coast cultures like the Kwakwaka'wakw and what examples of “art” or “visual culture” can we see in them?
+
+4. Regarding the various dances and songs revolving around cannibalist tendencies, like the Hamat'sa dance, what do you think is the symbolic idea behind this? What visual or sensorial features are part of this?
+
+5. Where do we see rank play a part in the material and/or intangible wealth of Kwakwaka'wakw? Point to examples.
+
+6. Re: the Jonaitis reading, why is the production and distribution of food significant among NW Coast cultures and the Kwakwaka'wakw groups mentioned in this section?
+
+7. What might be the symbolic value of material objects such as "transformation masks"?

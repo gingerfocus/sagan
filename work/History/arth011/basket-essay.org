@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID: 3AEB7F41-6F4A-4178-8D67-E4F1A2C70E13
+:END:
+#+title: basket-essay
+
+finished version: [[file:arth011-final-paper.pdf.org][arth011-final-paper.pdf]]
+
+* Basket Essay
+Final paper. Choose a basket and write on it.
+
+[[file:cnii001-basket-1.jpg.org][cnii001-basket-1.jpg]]
+[[file:cnii001-basket-2.jpg.org][cnii001-basket-2.jpg]]
+
+** Intro
+Pomo baskets are very interesting for the various way that the creation permeates through the society they where made it.
+
+(yet why do we not know where it came from?)
+
+In this essay I will outline a very basic understanding of what Pomo basket culture is. I will then make a claim that basket making was "likely" important to social structure. This is based on the fact of the methods of cultivation, the society that surrounds the basket makers and visual design of the baskets its self.
+
+Overall, in this essay I will attempt to make the point that this basket was created as a product of its various environmental factors. Firstly, the cultivation of plants to be used in weaving. Secondly, the veneration of weavers in Pomo culture along with the significance of wearing your craft. The first point will be made with the help of the Anderson reading. The second I will try to find a source on. This is important because understand how culture affects production is an idea that has implications outside of just this context.
+
+I have selected the second basket as the one I will analyze. It is listed as being a hat and comes from an unknown time period. It is likely to have been made by the Hupa people. It is 3.125in tall and has a 7in diameter. It is a twinned basket requiring more than one material to create and is lighter basket than coiled baskets. This shows an understand of surroundings and desire for easy of wearing it. However, there is a lot of information missing for this item, as a result the exact context of this why this item was created was lost.
+
+** Argument 1
+The baskets visual is very nice and is meant to show what time means for someone to be part of the hupa.
+
+** Argument 2
+THIS baskets are an expression of the society that surrounds them.
+The language they speak
+They way they interact
+How they use them
+
+This basket has many important iconographic parts. It appears to resemble some sort of rotation. This could be representative of the cycles of cultivation used when raising the plants for weaving. The cutting and burning plants to create these features must happen a specific time of the year. Also in the negative space, there are these long crossing lines that resemble something crossed or woven. There was a great emphasis on ability to make baskets as it was seen as important. As a result, wearing a nice or innovative basket could have acted as a status symbol. There is a small indentation at the top so the bottom of the basket is not completely flat. This could have been done to have the basket sit higher on the head of the person wearing it.
+
+** Argument 3
+Finnaly, how they take care of their enavirorment show their understanding to the signifigence of their craft and how it can change their life
+ie. Peoopel act in their best interest so if there is reward for makeing good baskets poeple will do that
+
+** Concultion
+Who gives a fuck
+
+source 1: https://camino.instructure.com/courses/93895/files/7968569?module_item_id=1826650
+
+Sources: - "Rhizomes were dug in spring, summer, or fall. Using a digging stick, a weaver exposed the rhizomes so that she could select the straightest and longest ones, usually one or two years old." (p.196, 2) - "In twined Pomo baskets the general course of the woof turns from right to left, as one looks at the basket from above... In twining, the long projecting warp rods at the top render it necessary for the weaver to hold the bottom of the basket toward her. The left hand firmly grasp the warp and keeps in place the just inserted woof-strands, while the right hand manipulates the twining of the pliable woof. The progression is therefore to the weaver's right, which correspond to the left as one looks into the basket" (p.239, 3). - "They regularly and abundantly practise a greater number of radically distinct technical processes of basket-making than any other tribe. They are the only people in the state among whom men have a share in the making of baskets" (p.248, 3) - "in northeastern California, where technique and materials are the same, baskets are normally higher, and a diagonal disposition is customary" (p.241-242, 3) - "Fire assisted in the destruction of disease spores of rust fungus, which if allowed to grow would form black spots on the stems of rules, rendering them useless for basketry. Rust fungi have resting spores that overwinter on the dead material or live plants and then germinate to produce tiny spores that are windborne. If they land on the plant in the presence of moisture they will germinate and infect the plant. Rust-infected material is sometimes invaded by secondary organisms. Slugs feed on the tissues that are rusted because these contain a chemical that is attractive to them" (p.206, 2). - "Virtually all of the material needs of the tribe were met by resources immediately at hand... The fact that the Hupa had no need to migrate to summer camps in order to insure a year-round food supply as did some California tribes reinforces the picture of close and permanent ties with their home territory". (p.1108-1109, 1) - "The relative ease with which the necessities of life could be procured made time available for cultural elaboration in nonessential areas." (p.1109, 1) - "The private ownership concept was extended beyond personal possessions to include the rights to hunting, fishing, and gathering sites. The monetary scheme provided not only a medium of exchange in daily living but also a major criterion for ascribing social status. Thus one's position in the community was determined largely by the bride-price one's mother had commanded at the time of her marriage with the result that an individual born of a woman for whom nothing had been paid was automatically an outcast or slave at the bottom of the social hierarchy." (p.1109, 1)
+
+** Bibliography
+[1]: Bushnell, John H. “From American Indian to Indian American: The Changing Identity of the Hupa.” American Anthropologist 70, no. 6 (1968): 1108--16. http://www.jstor.org/stable/669512.
+[2]: ANDERSON, M. KAT. Tending the Wild: Native American Knowledge and the Management of California's Natural Resources. 1st ed. University of California Press, 2005. http://www.jstor.org/stable/10.1525/j.ctt1ppfn4.
+[3]: Kroeber, A. L. “California Basketry and the Pomo.” American Anthropologist 11, no. 2 (1909): 233--49. http://www.jstor.org/stable/659465.

@@ -1,0 +1,108 @@
+:PROPERTIES:
+:ID: 6DE2B705-2138-4ACE-BBB7-4F2A7A162AAA
+:END:
+#+title: ELEN50L-PreLab2
+
+Evan Stokdyk
+ELEN50L - Prelab 2
+
+** Part 1
+![[file:pl1.jpg.org][name|500]]
+
+![[file:2bc.jpg.org][question 2|800]]
+
+#+begin_src matlab
+clc
+close all
+clear
+
+#  Constants
+# r1 = 2.2;
+# r2 = 2.2;
+# r3 = 3.3;
+# r4 = 4.7;
+# 
+# vs = 10;
+# 
+ Part A - Figure 1
+reqa = r1 + r2;
+i1a = vs / reqa
+
+v1a = r1 * i1a
+v2a = r2 * i1a
+
+#  Part B - Figure 2
+# reqb = r1 + (r2 * r3) / (r2 + r3);
+# i1b = vs / reqb
+# i2b = (r3 * i1b) / (r3 + r2)
+# i3b = (r2 * i1b) / (r3 + r2)
+# 
+# v1b = i1b * r1
+# v2b = i2b * r2
+# v3b = i3b * r3
+# 
+ Part C - Part 1 Step 11
+reqc = r1 + ( 1 / ( (1 / r2) + (1 / r3) + (1 / r4) ) );
+i1c = vs / reqc
+r34c = (r3 * r4) / (r3 + r4);
+i2c = (r34c * i1c) / (r34c + r2)
+i34c = i1c - i2c;
+i3c = (r4 * i34c) / (r4 + r3)
+i4c = i34c - i3c
+
+v1c = i1c * r1
+v2c = i2c * r2
+v3c = v2c
+v4c = v3c
+#+end_src
+
+** Part 2
+![[file:pl2.jpg.org][name|500]]
+
+```matlab
+​#  Constants
+​# vs = 10;
+​# r1 = 2.2;
+​# r2 = 2.2;
+​# r3 = 3.3;
+​# r4 = 2.2;
+​# r5 = 2.2;
+​# r6 = 2.2;
+​# 
+Part A - Equivelent Resistance
+r56 = r5 + r6;
+r456 = (r56 * r4) / (r56 + r4);
+r3456 = r3 + r456;
+r23456 = (r3456 * r2) / (r3456 + r2);
+req = r1 + r23456
+
+​#  Part B - Voltage and Current
+​# i1 = vs / req;
+​# i2 = (r3456 * i1) / (r2 + r3456)
+​# i3 = i1 - i2
+​# i4 = (r56 * i3) / (r4 + r56)
+​# i5 = i3 - i4
+​# 
+​# v1 = r1 * i1
+​# v2 = r2 * i2
+​# v3 = r3 * i3
+​# v4 = r4 * i4
+​# v5 = r5 * i5
+​# v6 = r6 * i5
+​# 
+Part C - Verify KCL
+assert(-i1 + i2 + i3 == 0);
+assert(-i3 + i4 + i5 == 0);
+assert(i1 - i2 - i4 - i5 == 0);
+
+​#  Part D - Verify KVL
+​# assert(v1 + v2 - vs == 0);
+​# assert(v3 + v4 - v2 == 0);
+​# assert(v5 + v6 - v4 == 0);
+​# ```
+​# 
+​# ## Nominal value of resistors
+​# | Resistor nominal value | First 3 color bands on the resistor |
+​# | ---------------------- | ----------------------------------- |
+​# | 1000 Ohms | Brown, black, red |
+​# | 27000 Ohms | Red, purple, red |

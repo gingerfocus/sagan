@@ -1,0 +1,49 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Homework 5", columns: 1, author: "Evan Stokdyk")
+
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#show raw: it => align(center)[#it]
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+Count the number of bits for which the next bit is also one.
+
+#+BEGIN_EXPORT typst
+#raw(read("p1.asm"), block: true, lang: "asm")
+#+END_EXPORT
+
+Debuging this and printing memory values at end yeilds correct results.
+
+#+RESULT: 
+: (gdb) x/4 &resultlist
+: 0x20000010:     5       19      0       3
+
+* Problem 2
+*RCC_APB1ENR2*
+  To find the memory address I first searched for this in the pdf. It appears on
+  page 244 and states the address offset is 0x5C. This is offest from RCC_BASE
+  which we used in last lab. By searching for uses of RCC in the pdf I found a
+  graphic on page 69 that shows the base address of RCC peripherials is at
+  0x40021000. This means the memory address is _0x4002105C_.
+
+*GPIOC_OSPEEDR*
+- base   (page 068): 0x4800 0800
+- offese (page 279): 0x08
+
+  address: 0x4800 0808
+
+*TIM_CR2*
+- base   (page 072): 0x4000 0000
+- offset (page 920): 0x04
+
+  address: 0x4000 0004
+  
+*LCD_CR*
+- base   (page 072): 0x4000 2400
+- offset (page 681): 0x00
+  
+  address: 0x4000 2400

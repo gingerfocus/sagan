@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID: 53BAF457-B485-4255-A7FF-C9C4410FAC04
+:END:
+#+title: elen50-prelab3
+
+Elen50 - Prelab 3
+
+Evan Stokdyk
+
+Th - 2:15
+
+--------------
+
+* Part 1
+** Part A
+![[file:ecen50-prelab3-part1a.jpg.org][name|600]]
+​## Part B
+Matlab Code:
+
+#+begin_src matlab
+clear
+close all
+clc
+
+Vs = 5;
+Rs = 1e5;
+Rvm = 1e6;
+
+R1 = 12e3;
+
+V1 = (R1 * Vs) / (Rs + R1)
+Req = (R1 * Rvm) / (R1 + Rvm);
+V1L = Vs * ( (R1 * Rvm) / ( Rs * (R1 + Rvm) + R1 + Rvm ) )
+E1 = (V1L - V1) / V1 * 100
+RvmL = ( (Rs + 1) * R1 * V1L ) / ( (Vs * R1) - (Rs * V1L) - V1L )
+#+end_src
+
+Results Table:
+
+| R1     | V1    | V1L    | E1 (%) | RvmL   |
+|--------+-------+--------+--------+--------|
+| 12000  | 0.536 | 0.5929 | 10.671 | 100000 |
+| 33000  | 1.241 | 1.597  | 28.750 | 100000 |
+| 56000  | 1.795 | 2.6515 | 47.726 | 100000 |
+| 75000  | 2.143 | 3.488  | 62.789 | 100000 |
+| 100000 | 2.5   | 4.545  | 81.816 | 100000 |
+
+* Part 2
+![[id:2010B5F9-6F16-42CA-8E39-1C496F64175C][name|800]]
+
+** Part B
+Matlab Code:
+
+#+begin_src matlab
+clear
+close all
+clc
+
+Vs = 2;
+Rs = 1e2;
+Ram = 10;
+
+R2 = 430;
+
+I2 = Vs / (Rs + R2)
+I2L = Vs / (Rs + R2 + Ram)
+E2 = (I2L - I2) / I2 * 100
+RamL = (Vs / I2L) - R2 - Rs
+#+end_src
+
+Results Table:
+
+| R1  | I2 (mAmps) | I2L (mAmps) | E2 (%) | RamL |
+|-----+------------+-------------+--------+------|
+| 51  | 13.2       | 12.4        | -6.211 | 10   |
+| 120 | 9.1        | 8.8         | -4.348 | 10   |
+| 270 | 5.4        | 5.3         | -2.632 | 10   |
+| 330 | 4.7        | 4.5         | -2.273 | 10   |
+| 430 | 3.8        | 3.7         | -1.852 | 10   |

@@ -1,0 +1,167 @@
+:PROPERTIES:
+:ID: DC76C67B-EA0C-4AD9-A362-30509D714361
+:END:
+#+title: Modern Physics
+
+Physics is the study of the physical world and its interactions.
+
+* Normal Relativity
+See other notes
+
+The basic ideas is concept of an inertial reference frame. We can see that things add where:
+\(V_{ac} = V_{ab} + V_{bc}\)
+
+An inertial reference frame is kinda like a physics axiom where it is a qualifier that states we can make certain baseline assumption.
+https://en.wikipedia.org/wiki/Non-inertial_reference_frame
+
+** Galilean Transformations
+can transform one reference frame to another - \(x' = x - vt\) - \(t' = t\)
+
+As a spoiler the second statement is what will change as we get /special/. But by taking derivatives you can use these to show that forces are the same in every reference frame.
+
+*Principal of Relativity* - It does not matter whether you are moving (at a constant speed) or still. There is no experiment you can do to differentiate between stillness and moving.
+
+Galilean Relativity - All laws of motion are the same in all inertial frames of reference.
+
+Einstein's Upgrade - All laws of physics are the same in all inertial frames of reference.
+
+The fundamental problem with Galileo is that he assumed 1 meter and 1 second is the same for everyone.
+
+* Special Relativity
+Using Galilean transformations you can get some nonsensical results such as a stationary observer watching a ship moving at 0.5c fire a laser should observe it traveling at 1.5c.
+
+This is not possible so we either cancel physics or find a better answer the Galileo.
+
+*Postulate of Special Relativity* - All laws of physics are the same in all inertial frames of reference. The speed of light is the same for all inertial observers
+
+Note: every observe can re-derive the speed of light (c) as the same in every reference frame as it comes from [[file:Maxwell's Equations.org][Maxwell's Equations]]: \(c=\frac{1}{\sqrt{{\epsilon}_0 {\mu}_0}}\)
+
+** Lorentz Transformation
+The fundamental revelation of shyt. The alternative to the Galilean transformations: - \(x' = \gamma(x-vt)\) - \(t' = \gamma(t-\frac{vx}{c^2})\) - \(\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\)
+
+Lorentz derived these by just guessing and checking but was later proven correct by Einstein.
+
+Consequence #1 - Time dilation. Essentially, moving clocks will run slow. The classic example is if you have an identical twin you send on a trip at the speed of light, their trip will feel shorter for them than it actually was, so the twin on Earth is supposedly older. But, from the other one's frame of reference, the Earth is moving away from them at the speed of light, so the twin on Earth should be younger. (This is ultimately resolved by the fact that the twin's spaceship would need to turn around to come back, thereby accelerating.
+
+Consequence #2 - Length contraction. Essentially, moving rods shrink. Observers will not agree on the lengths between things. This reconciles with the disagreement on time--- if we disagree on time but agree on speed, we must disagree on distance traveled.
+
+Consequence #3 - Relativity of Simultaneity. Things do not necessarily happen at the same time according to observer
+
+If we disagree on so many things how do we possibly make arguments. There are two things we can agree on which is the speed of light and spacetime.
+
+Spacetime - the combination of both space and time using math #todo
+
+Proper Time - The time in your own reference frame.
+Proper Length - No shocker, it represents the length in your own reference frame
+
+** Time Dilation
+There are some things we cant explain, example.
+
+[[id:78199875-F1F4-4BE2-A2B4-F1E522AAFD39][Muons]] created in the upper atmosphere receive kinetic energy from cosmic rays and move at approximately 0.99 times the speed of light. So, we can calculate how much they move in their lifetime: - \(td = 2.2 ∗ 10−6\) - \(v = 0.99c\) - \(d = vt = 653m\)
+
+But, we detect a lot of muons on the ground from cosmic ray collisions, yet the upper atmosphere is much further up than 653 meters. How is this possible? It's because they're traveling so fast that the time they experience is slower than the time we, the observers, experience. Yes, that's right: time dilation. Let's go back to our equation from last class:
+
+δt = γδtp γ = 1 q 1 − v2 c2 Where tp represents the proper time of the muon. So,
+for v = 0.99, γ = 7.08, so the time we observe is actually 15.6μs. This means
+that distance is in fact 4633 meters, which is much more possible. Wait! But how
+does this work from the muon's perspective? Well... length contraction!
+
+\(L' = L * \gamma = 653 * 7.08 = 4633\)
+
+This is a much more reasonable answer can can partially explain what we observe.
+
+** Relativistic Momentum
+Introducing, the 3rd momentum fakeout. More to come, you never know with this.
+
+\(p=\gamma mv\)
+
+We can do more things to show something cool - \(F = dp / dt\) - \(W = \int^{x_2}_{x_1}{Fdx}\) - \(W = \int^{x_2}_{x_1}{\frac{d}{dt} \gamma mv dx}\) - \(W = \int^{x_2}_{x_1}{\frac{d}{dt} \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}} dx}\) - \(K= \gamma mc^2 - mc^2\) - \(E = K + mc^2 = \gamma mc^2\) - \(E^2 = p^2c^2 + (mc^2)^2\)
+
+​#todo [[file:relative-momentum-derivation.jpg.org][relative-momentum-derivation.jpg]]
+
+So when p=0 and \(\gamma\)=1 this is Einstein's derivation with most of the steps skipped. Go and time travel back to 1923 to claim your noble prize.
+
+* Causality
+An event is an instantaneous moment in spacetime.
+
+Two observers may not agree on space and time but they will always agree on causality, one of a few real things in the universe.
+
+In a space time graph (an x-y graph of space vs time) there is a thing called a light cone that is a triangle on the graph. An event cannot be caused by somethign not in its light triangle. All observers will agree on what causes what but not nessisarly the order (?).
+
+Mirai Nikki
+
+* Black Holes
+​#todo
+swarzchild radius
+
+* Duality
+Wave particle duality is a thing.
+
+** Photoelectric Effect
+??
+Which phenomenon provided the early concrete evidence that light (historically thought of as a wave) acts as a particle?
+Einstein showed that light consists of discrete packets (quanta) called *photons*. The energy of these particles depends on frequency, not intensity:
+\[E = hf\]
+This proved the "particle" side of the duality for light.
+
+** Work Function
+Given Einsteins /Photoelectric Effect/:
+\[ E = hf - \psi \]
+
+* Flashcards
+generated with ai and refinded. #todo place these within the document.
+​#flashcards
+
+What is the fundamental equation proposed by *Louis de Broglie* in 1924 that suggests all matter has wave-like properties?
+?
+*The de Broglie Wavelength* formula:
+\[\lambda = \frac{h}{p}\]
+Where:
+​* \(\lambda\) is the wavelength.
+​* \(h\) is Planck's constant.
+​* \(p\) is the momentum of the particle (\(p=mv\)).
+
+Conceptually, how did *de Broglie's* original view of the "matter wave" differ from *Schrödinger's* later interpretation?
+?
+The particle does not have a defined position until measurement; the wave describes the probability of finding it.
+​* *de Broglie (Pilot Wave):* Originally envisioned a physical wave that guides a distinct particle (a dualistic realism). (One particle, many position)
+​* *Schrödinger (Copenhagen view):* The mathematical wave function \(\Psi\) is *not* a physical disturbance in space, but a /probability amplitude/. (One unknown position)
+
+Which principle dictates the fundamental limit of precision when measuring wave-particle properties?
+?
+*Heisenberg's Uncertainty Principle*. It states that the more precisely you know the position (\(x\)), the less precisely you can know the momentum (\(p\)), and vice versa.
+\[\sigma_x \sigma_p \ge \frac{\hbar}{2}\]
+This is a direct consequence of the wave nature of matter (Fourier transform properties).
+
+In the *Copenhagen Interpretation*, what happens to a system existing in a /superposition/ of states when an observer measures it?
+?
+*Wave Function Collapse*. The continuous evolution of the wave function (governed by the Schrödinger equation) is interrupted. The system instantaneously "collapses" or reduces to a single *eigenstate* corresponding to the measured value.
+
+How does the *Many-Worlds Interpretation (Everettian)* handle the concept of "State Collapse" differently than Copenhagen?
+?
+*MWI denies that collapse occurs.*
+Instead of the wave function collapsing to a single outcome, the universe *branches*. All possible outcomes of a quantum interaction are realized in separate, non-communicating branches of the universe. The observer becomes entangled with the system, existing in a superposition of observing all outcomes.
+
+What is the time-dependent equation that describes how the quantum state of a physical system changes over time?
+?
+*The Schrödinger Equation:*
+\[i\hbar \frac{\partial}{\partial t}\Psi(x,t) = \hat{H}\Psi(x,t)\]
+Where \(\hat{H}\) is the Hamiltonian operator (total energy). This equation treats the particle entirely as a wave function (\(\Psi\)) evolving deterministically---until measurement.
+
+If \(\Psi\) represents the wave function of a particle, how do we calculate the probability of finding that particle in a specific region?
+?
+By using the *Born Rule*. The probability density is the square of the absolute magnitude of the wave function:
+\[P(x) = |\Psi(x)|^2 = \Psi^*(x)\Psi(x)\]
+This bridged the gap between the wave mathematics and the particle observation.
+
+In the double-slit experiment, what happens if you fire electrons one by one, but place a *detector* at the slits to see which one the electron goes through?
+?
+The *Interference Pattern disappears*.
+​* *Unobserved:* Electrons act as [[file:waves.org][waves]], interfering with themselves to create a striped pattern.
+​* *Observed:* The act of measurement collapses the wave function; electrons act as particles and form two distinct clumps (clumps corresponding to Slit A and Slit B).
+
+What is *Niels Bohr's* principle regarding the observation of wave and particle properties?
+?
+*The Principle of Complementarity*.
+It states that objects have complementary properties (like wave behavior and particle behavior) which cannot be observed or measured *simultaneously*.
+The experimental setup determines which property is manifested; you can see the wave /or/ the particle, but never both at the exact same time.

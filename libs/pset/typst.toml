@@ -1,0 +1,6 @@
+[package]
+name = "pset"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Evan Stokdyk"]
+description = "simple pset layout"

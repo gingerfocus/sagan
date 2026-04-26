@@ -1,0 +1,41 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Prelab 4", columns: 1, author: "Evan Stokdyk")
+
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Deliveables
+In this lab, we aim to get familar writing subroutines and then apply it to
+complex program that runs of the board. The two example programs are one that
+uses the stack as storeage and a double recusive fibonaci function. After that
+the final program for the board has  the goal of the program is to congfigure,
+read and decode input from the joystick on the STM board and demo it working.
+
+* Lab Plan
+I think it will be possible to use the r0 register as an offset against the
+stack pointer in order to get the value of each stack item in problem 1.
+
+For problem 2, the fibonacci function will first always need to push the link
+register. In addition, the value from the first function call will also need to
+be pushed.
+   
+In problem 3, going slowly and verifying with tests that each small subroutines
+works correctly. Step 2 can be done using a simple mask and and operation. Part
+3 can also use AND masking but now add the S flag to do conditional operations
+if the result is non-zero. These can be used alongside the lessons learned about
+link register preservation and stack memory in problem 1 & 2 to write a solution
+to part 4.
+
+* Input Pins
+They are both filters but have different valued resitors. It states in the lab
+the the directional inputs (including JOY_UP) have a low pass filter attached.
+It is likely that the filter attached to center has an inverted condition (a
+very large low pass filter) such that the two lines are never active
+simultanously. The schematic shows very different resistor values.
+
+To configure these GPIO pins one must enable clock A, configure pins 0,1,2,3,5
+on A as pull up down inputs.

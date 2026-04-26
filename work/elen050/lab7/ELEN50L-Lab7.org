@@ -1,0 +1,88 @@
+:PROPERTIES:
+:ID: 45B48C37-2569-468A-9942-3EB24BF1AD35
+:END:
+#+title: ELEN50L-Lab7
+
+Evan Stokdyk
+Lab 7: Operational Amplifiers
+ELEN50L
+Due: 6/8/25
+
+** Part 1 - Inverting and Non-Inverting Op Amps Gain
+In this lab we aimed to confirm assumptions about operational amplifiers (op amps) and see how they react in a practical lab environment. We chose resistors for the inverting op amp such that it had a gain of -10 and the non-inverting had a gain of 5.
+
+Figure 1.1 - Non-Inverting Op Amp
+
+Figure 1.2 - Inverting Op Amp
+
+This resulted in the following resistance values. We measured each of them with the digital multimeter to get better values for each.
+
+|                 | Rs1   | Rf1   | Rs2   | Rf2   | RS    |    |
+|-----------------+-------+-------+-------+-------+-------+----|
+| Nominal Values  | 3     | 30    | 7.5   | 30    | 1     | kΩ |
+| Measured Values | 2.969 | 33.09 | 7.546 | 33.09 | 0.983 | kΩ |
+
+Table 1.3 - Resistance Values
+
+Now we constructed the non-inverting op amp connected to an ac power supply set to a square wave. You can see the output in Figure 1.4. We used the cursors to measure the gain on the source and output which is recorded in Table 1.7. The same process was also done for the inverting op amp visible in Figure 1.5.
+
+Figure 1.4 - Oscilloscope output for non-inverting op amp setup\\
+Figure 1.5 - Oscilloscope output for inverting op amp setup
+
+Now we measured the two values in volts on each wave and divided them to get the gain.
+
+|               | Source (1) | Output (1) | Gain (1)  | Source (2) | Output (2) | Gain (2)  |
+|---------------+------------+------------+-----------+------------+------------+-----------|
+| Inverting     | 0.0974     | -1.095     | -11.2423  | -0.0994    | 1.075      | -10.81488 |
+| Non-Inverting | 0.09748    | 0.5728     | 5.2574887 | -0.1035    | -0.5125    | 5.5342995 |
+
+Table 1.6 - Peak Comparison of 1st Half Wave (1) and 2nd (2)
+
+|                         | Expected Gain | Gain (1) | Gain (2)  | % Error (1) | % Error (2) |
+|-------------------------+---------------+----------+-----------+-------------+-------------|
+| Inverting Amplifier     | -11.145       | -11.2423 | -10.81488 | 0.87        | -2.96       |
+| Non-Inverting Amplifier | 5.267         | 5.257488 | 5.5342995 | -0.18       | 5.07        |
+
+Table 1.7 - Gain of Inverting and Non-Inverting Amplifiers with Error
+
+** Part 2 - Op Amps Outside the Linear Region
+Previously, we assumed that all the op amps would be within the linear region. Now we will use a voltage follower op amp to see its effect. Note in the diagrams below Rs is equal to 1kOhm and vg is 1V.\\
+Figure 2.1 - Circuit constructed to see the effect of a resistor on a load
+
+Figure 2.2 - Circuit constructed to see the effect of a voltage follower on a load
+
+Figure 2.3 - Photo of oscilloscope measuring Vout for Figure 2.2\\
+Now we changed the dial on the decade box resistor and measured the max output voltage for many different values.
+
+| Rdec (Ω) | vg (V) | Expected Vout (1) | Actual Vout (1) | % Error (1) | Expected Vout (2) | Actual Vout (2) | % Error (2) |
+|----------+--------+-------------------+-----------------+-------------+-------------------+-----------------+-------------|
+| 5000     | 1      | 0.8357            | 0.795           | -4.8703     | 1                 | 0.99            | -1          |
+| 3000     | 1      | 0.7532            | 0.739           | -1.8854     | 1                 | 0.99            | -1          |
+| 1000     | 1      | 0.5043            | 0.477           | -5.4109     | 1                 | 0.99            | -1          |
+| 800      | 1      | 0.4487            | 0.465           | 3.6369      | 1                 | 0.99            | -1          |
+| 400      | 1      | 0.2892            | 0.313           | 8.2197      | 1                 | 0.93            | -7          |
+| 200      | 1      | 0.1691            | 0.204           | 20.6660     | 1                 | 0.72            | -28         |
+| 100      | 1      | 0.0923            | 0.136           | 47.2880     | 1                 | 0.52            | -48         |
+| 50       | 1      | 0.0484            | 0.095           | 96.2700     | 1                 | 0.37            | -63         |
+| 30       | 1      | 0.0296            | 0.079           | 166.7567    | 1                 | 0.28            | -72         |
+| 25       | 1      | 0.0248            | 0.079           | 218.5280    | 1                 | 0.25            | -75         |
+| 20       | 1      | 0.0199            | 0.071           | 256.0650    | 1                 | 0.23            | -77         |
+| 15       | 1      | 0.0150            | 0.071           | 372.3867    | 1                 | 0.19            | -81         |
+| 10       | 1      | 0.0101            | 0.063           | 525.5900    | 1                 | 0.15            | -85         |
+| 5        | 1      | 0.0051            | 0.059           | 1065.840    | 1                 | 0.1             | -90         |
+
+Table 2.4 - Voltage Amplitudes for Voltage Follower
+
+In this data, the advantage of the voltage follower is clear. For any
+given load, the voltage across it is much greater compared to a
+resistor. The error for the voltage is almost 0 for high values of the
+decade box but as it gets smaller the internal resistance of the op amp
+starts to matter.
+
+In addition, the voltage error in part a is very large and shows a
+similar trend of getting worse. However, this is unexpected. In this
+lab, we had many struggles with equipment having two broken op amps and
+a potential broken power supply. In addition, plugging in a high wattage
+laptop charger into the wall at the same time as the power supply
+resulted in bad data. Any one of these factors could have contributed to
+this error.

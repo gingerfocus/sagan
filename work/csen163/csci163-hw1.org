@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID: 841D0C84-C831-49CA-BB1D-E96486F9375C
+:END:
+#+title: csci108-hw1
+
+Evan Stokdyk
+CSCI 163 - WINTER 2025
+Assignment 1
+
+* Problem 1
+The following functions are order by rate of growth from slowest to the fastest. Logarithms are to the base e.
+
+Order:
++ \(5 = O(1)\) 
++ \(n^{0.1} = O(\sqrt n)\) 
++ \(4\log n = O(\log n)\) 
++ \(5n = O(n)\) 
++ \((\log{n})^2 = o(n \log n)\) 
++ \(2n \log \log n = O(n \log n)\) 
++ \(n^5 = O(n^5)\) 
++ \(n! = O(n!)\) 
++ \(3^n = O(3^n)\)
+
+* Problem 2
+Count the exact number of “sum++” operations (as a function of N) of each of following code fragments.
+** Part A
+
+#+begin_src C
+int sum = 0;
+for (int i = 1; i < N; i++)
+    for (int j = 0; j < i; j++)
+        sum++;
+#+end_src
+
+Answer: \(1 + 2 + 3 + 4 + ... + (n-2) + (n-1) = \frac{(n-2)(n-1)}{2}\)
+
+** Part B
+#+begin_src C
+int sum = 0;
+for (int i = 1; i < N; i *= 2)
+    for (int j = 0; j < N; j++)
+        sum++;
+#+end_src
+
+Answer: \(1 + 2 + 4 + ... + (\frac {n}{2}) + (n) = \frac{1-2^(n+1)}{1-2} = 2^{n+1} - 1\)
+
+​
+* Problem 3
+Indicate the class Θ(g(n)) the following function belongs to. Use the simplest and the strongest g(n) possible in your answer. Prove your assertion.
+
+\(2n \log(n^2) + (n + 1)^2 \log(\frac{n}{2})\)
+\(4n \log(n) + (n^2 + 2n + 1)(\log(n) - \log(2))\)
+\(4n \log(n) + (n^2\log(n) + 2n \log n + \log n) - (n^2 \log(2) + 2n\log 2 + \log 2) = Θ(n^2\log n)\)

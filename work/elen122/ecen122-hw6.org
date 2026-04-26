@@ -1,0 +1,67 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN122 - Homework 6", columns: 1, author: "Evan Stokdyk")
+
+// #set text(16pt)
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+/What are the difference between branch predictors in older MIPS computers verses RISC-V./
+
+Older MIPS branch predictors would always predict that a branch is not taken.
+RISC-V uses the sign of the jump to predict the branch.
+
+* Problem 2
+
+In the given source code, line 15 checks if the prevous instruction contains a
+register write which would cause a data hazard. If it does line 16 then checks
+that the register is not 0. Register 0 is the null register so writes to it are
+discarded and thus dont cause a hazard.
+
+The code has a problem in that its two if statements are not exclusive so the
+second if statement always overwrites the value of the first.
+
+* Problem 3
+#+begin_src asm
+add  x1, x2, x3
+addi x6, x0, 32
+add  x1, x1, x4
+lw   x5, 0(x6)
+beq  x1, x5, L1
+#+end_src
+
+The above code executes like such
+
+|      |  1 | 2  | 3  | 4   | 5   | 6   | 7   | 8  |   9 | 10 |
+| add  | IF | ID | EX | MEM | WB  |     |     |    |     |    |
+| addi |    | IF | ID | EX  | MEM | WB  |     |    |     |    |
+| add  |    |    | IF | ID  | EX  | MEM | WB  |    |     |    |
+| lw   |    |    |    | IF  | ID  | EX  | MEM | WB |     |    |
+| beq  |    |    |    |     | IF  | ID  | ID  | EX | MEM | WB |
+
+Note that in state 5 data is forwarded from the first add instruction to the
+second. There is a second forwarding in state 8 from to use the value read from
+memory. As a result, there is only 1 stall.
+
+This code can be reordered such that there is no stall.
+
+#+begin_src asm
+addi x6, x0, 32
+add  x1, x2, x3
+lw   x5, 0(x6)
+add  x1, x1, x4
+beq  x1, x5, L1
+#+end_src
+
+|      |  1 | 2  | 3  | 4   | 5   | 6   | 7   | 8   |  9 |
+| addi | IF | ID | EX | MEM | WB  |     |     |     |    |
+| add  |    | IF | ID | EX  | MEM | WB  |     |     |    |
+| lw   |    |    | IF | ID  | EX  | MEM | WB  |     |    |
+| add  |    |    |    | IF  | ID  | EX  | MEM | WB  |    |
+| beq  |    |    |    |     | IF  | ID  | EX  | MEM | WB |
+
+Data is forwarded in steps 3, 4, 5, and 6 but there is no stall.

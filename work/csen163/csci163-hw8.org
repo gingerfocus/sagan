@@ -1,0 +1,70 @@
+:PROPERTIES:
+:ID: 7F35EF5C-DFDF-4D8A-BD67-409FD64AA855
+:END:
+#+title: csci163-hw8
+
+Evan Stokdyk
+
+CSCI 163 - WINTER 2025
+
+Assignment 7
+
+* Problem 1
+
+#+begin_quote
+[!faq] Problem
+Given a digraph G = (V, E), its transitive closure G* is a digraph defined as follows: It has the same vertex set V as G and contains an edge from a vertex a to another vertex b if and only if there is a directed path from a to b in G. Suppose we want to design a DP algorithm that outputs G∗ on input G.
+#+end_quote
+
+** Solution
+Consider a 2x2 adjacency matrix where M[a][b] means the edge from a to b is in G*. Initially, fill the list with the the edges of G and the diagonal M[a][a] as each edge can reach itself. Then you can iterate each set of 3 vertices. If there is a directed path from a to b and b to c then there is a directed path from a to c. After iterating the set of vertices 3 times G* is represented by the adjacency matrix so the runtime is \(O(V^3+E)\).
+
+* Problem 2
+
+#+begin_quote
+[!faq] Problem
+Compute the shortest path from vertex 2 to every other vertex of the attached graph using the Bellman-Ford Algorithm. Show your work by constructing a table as in Slide 13 of Lecture 19.\\
+![[file:csci163-hw8-graph.png.org][name|600]]
+#+end_quote
+
+** Solution
+|     |            | 1         | 2         | 3         | 4         | 5         |
+|-----+------------+-----------+-----------+-----------+-----------+-----------|
+| k=0 |            | null, inf | null, inf | null, inf | null, inf | null, inf |
+| k=1 | (2, 5, 7)  |           |           |           |           | 2, 7      |
+|     | (2, 4, 1)  |           |           |           | 2, 1      |           |
+|     |            | null, inf | null, 0   | null, inf | 2, 1      | 2, 7      |
+| k=2 | (5, 4, 6)  |           |           |           | 5, 13     |           |
+|     | (4, 3, -5) |           |           | 4, -4     |           |           |
+|     | (4, 1, 2)  | 4, 3      |           |           |           |           |
+|     |            | 4, 3      | null, 0   | 4, -4     | 2, 1      | 2, 7      |
+| k=3 | (1, 5, -4) |           |           |           |           | 1, -2     |
+|     | (1, 2, 3)  |           | 1, 6      |           |           |           |
+|     | (1, 3, 8)  |           |           | 1, 11     |           |           |
+|     | (3, 2, 4)  |           | 3, 0      |           |           |           |
+|     |            | 4, 3      | null, 0   | 4, -4     | 2, 1      |           |
+
+* Problem 3
+
+#+begin_quote
+[!faq] Problem
+Compute the length of longest common subsequence for the two input strings x = ABCBDAB and y = BDCABA using the dynamic programming algorithm on Slide 11 of Lecture 20. Show your work by filling the DP table.
+#+end_quote
+
+|   |    | A  | B  | C  | B  | D  | A  | B  |
+|---+----+----+----+----+----+----+----+----|
+|   | 0* | 2  | 4  | 6  | 8  | 10 | 12 | 14 |
+| B | 2  | 1* | 2  | 4  | 6  | 8  | 10 | 12 |
+| D | 4  | 3  | 2* | 3  | 5  | 6  | 8  | 10 |
+| C | 6  | 5  | 4  | 2* | 4  | 6  | 8  | 10 |
+| A | 8  | 6  | 6  | 4  | 3* | 5  | 6  | 8  |
+| B | 10 | 8  | 6  | 6  | 4  | 4* | 6  | 6  |
+| A | 12 | 10 | 8  | 7  | 6  | 6  | 4* | 6* |
+
+** Solution
+6 Cost, 4 Swaps, 1 Gap
+
+| Swap | Swap | Match | Swap | Swap | Match | Gap |
+|------+------+-------+------+------+-------+-----|
+| A    | B    | C     | B    | D    | A     | B   |
+| B    | D    | C     | A    | B    | A     | x   |

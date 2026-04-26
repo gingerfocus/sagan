@@ -1,0 +1,132 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN122 - Homework 4", columns: 1, author: "Evan Stokdyk")
+
+// #set text(16pt)
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+#+BEGIN_SRC asm
+        add     x18, x0, x0
+        addi    x29, x0, 100
+        addi    x30, x0, 20
+Loop:   lw      x7, 0(x10)          ; dereference pointer
+        add     x19, x19, x7
+        bge     x7, x30, End
+        addi    x10, x10, 4         ; increment to next item
+        addi    x18, x18, 1         ; increment index
+        blt     x18, x29, Loop
+End:                                ; pointer still in x10 position
+#+END_SRC
+
+The above assembly code can be rewriten into the following c code block:
+
+#+BEGIN_SRC c
+int *p1raw(int *array) { // x10
+    int i = 0; // add x18, x0, x0
+    int result, p; // x19, x7
+    int x29 = 100;
+    int x30 = 20;
+
+loop:
+    p = *array;             // lw  x7, 0(x10)
+    result += p;            // add x19, x19, x7
+    if (p > x30) break;     // bge x7, x30, End
+    array = &array[1];      // addi x10, x10, 4
+    i += 1;                 // addi x18, x18, 1
+    if (i < x29) goto loop;
+
+    return array;         // at end of block value in r10 is the array pointer
+}
+#+END_SRC
+
+Or further cleaned up into more human readable code:
+
+#+BEGIN_SRC c
+int *p1clean(int *array) {
+    int i, p, result;
+
+    for (i = 0; i < 100; i++) { 
+        p = *array;
+        result += p;
+        if (p >= 20) break;
+        array++;
+    }
+    return array;
+}
+#+END_SRC
+
+* Problem 2
+#+BEGIN_SRC c
+int func_hw4 (int a, int b) {
+    int ret;
+    ret = a + 2 * b;
+    return ret;
+}
+#+END_SRC
+
+The above c function can be rewritten into arm assembly:
+
+#+BEGIN_SRC asm
+func_hw4:   addi    sp, sp, -4
+            sw      x20, 0(sp)      ; save x20 as we use it 
+
+            slli    x5, x11, 1      ; shift left by 1 = mul by 1
+            add     x20, x10, x5    ; add intermediate value
+            addi    x10, x20, 0     ; move value to output register
+
+            lw      x20, 0(sp)      ; restore x20 register
+            add     sp, sp, 4
+            bx      x0, lr
+#+END_SRC
+
+* Problem 3
+[[file:ecen122-hw4-p3.png]]
+
+*Part A:* RISC results in a simpler fetch implementation compared to CISC by
+having a constant amount of data. As such the processor does not need to figure
+out how much data to fetch or do multiple fetches per cycle.
+
+*Part B:* The role of the PC is to index the memory to get the next instruction.
+It is set after every cycle either to the next value (pc+4) or some other value
+set from a branch instruction.
+
+*Part C:* The role of adder 1 is to increment the program counter after each
+instruction. It always adds the constant value of 4 to the program counter where
+as adder 2 adds a variable amount based on the instruction. This repersents a
+branch instruction which is PC relative and so the immediate value from the
+instruction is being added in the above graphic. One instrcution that uses adder
+2 is `beq x0, x0, -12` which will add the value -12 to the pc
+
+*Part D:* One instruction that uses both sig_a and sig_b is TODO
+
+*Part E:* One instruction that uses both sig_a and sig_c other than R-typst is TODO
+
+* Problem 4
+[[file:ecen122-hw4-p4.svg]]
+
+*Part A:* The control signals after the `add` instruction will look like:
+
+| RegWrite | ALUSrc | PCSrc | MemRead | MemWrite | MemtoReg |
+|        1 |      0 |     0 |       0 |        0 |        0 |
+
+*Part B:* The control signals after the `sw` instruction will look like:
+
+| RegWrite | ALUSrc | PCSrc | MemRead | MemWrite | MemtoReg |
+|        0 |      x |     0 |       x |        1 |        x |
+
+*Part C:* The instruction `todo` will assert both MUX1 and MUX2. This is ...
+
+*Part D:* The ALU1 is what is used for conditional branching. The other two are in fact not fully functioning ALUs.
+
+*Part E:* The ALU3 is what is used for calculating the target address for a
+ branch as its two inputs are the pc and the immediate value which is how 
+
+*Part F:* The two ALUs _can_ be executed at the same time as the only data dependece
+ is one the multiplexer after ALU3. This MUX should be in the correct state
+ assuming ALU1 finishes before the next clock edge.
+

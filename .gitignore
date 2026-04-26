@@ -1,12 +1,31 @@
+/.direnv
+/work/gnu-asm
+
+.opencode/
+.consolidated/
+
+# compiled objects
+*.o
+*.elf
+*.class
+*.pdf
+*.png
+*.zip
+*.jpg
+*.docx
+*.gif
+*.JPG
+*.xlsx
+*.mp4
+*.MOV
+*.mov
+
+# !**/*.sagan.md
+
+# binary files
+bin
 **/.zig-cache
 **/zig-out
 **/.direnv
 **/build
 
-# /csen-020/**/obj/
-# /csen-020/**/output*
-#
-# /csci-062/socialnetwork.pro.user
-# /csci-062/assets
-# /csci-062/.ipynb_checkpoints
-# /csci-062/lab/4/tmp

@@ -1,0 +1,80 @@
+:PROPERTIES:
+:ID: 8C73F380-13DF-4EF2-AD70-27262C623AB1
+:END:
+#+title: csen-prelab-7
+
+--------------
+
+date: 2025-02-18
+author: Evan Stokdyk
+---
+
+Evan Stokdyk
+
+PreLab 7
+
+CSEN 21L - T 2:30
+
+* Problem
+
+#+begin_quote
+This lab is going to model some functionality that might be employed in a simple game that is intended to test a person's reactions. It will involve two counters that will move in opposite directions; one will count up, the other will count down. We will need to imagine that the numbers are displayed to the person playing the game.
+
+If we had a physical implementation of this game, the player would have a button to control the counters. When the button is pressed, the two counters begin to count. And they continue to count as long as the button remains depressed. When the button is released, the counters stop counting. The objective of the game is to try to stop when both counters show the same value.
+
+We are going to use 3-bit counters as the primary building block for this design. A 3-bit counter can express 8 possible values (from 0 to 7), which is an even number of values. If we have an up counter and a down counter running through an even number of values, and running on the same clock, they will always match at a given value every time they run through their sequence. So we are going to modify the behavior of these counters so they only range through an odd number of values, specifically they will stay within the range of 1 to 5.
+
+We will model the button control of the counting with an input to our design that we will call Stop. Stop will be the inverse of the button being pressed, i.e., when Stop is not asserted, the counters will count, and when Stop is asserted the counters will stop counting and a result will be generated.
+
+To indicate the results of the game, there will be two output signals: - A “win” signal is asserted if the two counter values match when Stop is asserted. - A “lose” signal is asserted if the two counter values do not match when Stop is asserted. While Stop is not asserted, and the counters are counting, neither the “win” nor the “lose” signal is asserted.
+
+You might envision that this design could support multiple speeds. As the speed increases, the game becomes more challenging. But since we'll be doing this in simulation, we will not be concerned with the actual speed at which the circuit is running.
+#+end_quote
+
+* Questions
+** Problem 1
+This module takes a 3-bit Count value as input, and generates a Load signal and 3-bit New count value as outputs. Since we're aiming for a counter that counts from 1 to 5, this module needs to assert Load when it sees the count input is the value 5, and it needs to cause the counter to load the new value 1 (3'b001 in Verilog).
+
+#+begin_src verilog
+module UpControl(Count, Load, New);
+    input [2:0] Count;
+    output Load; 
+    output [2:0] New;
+
+    assign New=3'b001;
+    assign Load=(Count == 3'b101)
+endmodule
+#+end_src
+
+** Problem 2
+The inputs and outputs for this module are the same as UpControl, but in this case we need a module that will assert Load when it sees its count input shows the value 1, and it needs to cause the down counter to load the new value 5 (3'b101 in Verilog).
+
+#+begin_src verilog
+module DownControl(Count, Load, New);
+    input [2:0] Count;
+    output Load; 
+    output [2:0] New;
+
+    assign New=3'b101;
+    assign Load=(Count == 3'b001)
+endmodule
+#+end_src
+
+** Problem 3
+Write a Verilog module WinLose that takes as inputs the two 3-bit count values (UpCount and DownCount) as well as the Stop signal. There are three outputs from this module - a signal to be used as a count enable for your counters (CntEn) - explicit win and lose signals (Win and Lose)
+
+The counters should only count when Stop is not asserted. The Win and Lose signals should only assert while Stop is asserted. And only one of Win and Lose should assert, not both. Winning is determined by checking to see if the two count values are the same.
+
+#+begin_src verilog
+module WinLose(UpCount, DownCount, Stop, Win, Lose, CntEn);
+    input [2:0] UpCount, DownCount;
+    input Stop;
+    output Win, Lose, CntEn; 
+
+    always @(*)
+        if (UpCount == DownCount) Win = Stop; 
+        else Lose = Stop;
+        
+    assign CntEn=(~Stop);
+endmodule
+#+end_src

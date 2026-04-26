@@ -1,0 +1,106 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN122 - Prelab 7", columns: 1, author: "Evan Stokdyk")
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+/Review the pipelined datapath shown on the last page and briefly explain the
+role of each pipeline stage./
+
+Stage 1 reads the instruction at PC out of memory and latches it. Stage 2 reads
+data from the RF, prepares and immediate and parses what signals should be
+active later in the seqence and latches it all. Stage 3 either preforms some
+operation in the alu or memory and latches the result. Stage 4 write back any
+data to the RF and possibly halts the machine. This is the stage that would
+cause a pipeline hazard.
+
+* Problem 2
+/Specify which pipeline stage each signal is used in/.
+
+| Control signals | Pipeline Stage | Control signals | Pipeline Stage |
+| reg_src1        | DEC            | mem_wr          | EXE            |
+| reg_src2        | DEC            | reg_wr          | WB             |
+| reg_dst         | WB             | imm_sel         | DEC            |
+| imm             | DEC            | data_sel        | EXE            |
+| add_sub         | EXE            | dp_en           | WB             |
+| mem_rd          | EXE            | halt            | WB             |
+
+* Problem 3
+/Specify an opcode that you will use for a NOP instruction/.
+
+The NOP code will use the 1001 (9) encoding.
+
+* Problem 4
+/Fill out the following table/.
+
+|          | load | move | sub | add | disp | halt | subi | addi | store | nop |
+| add_sub  |      |      | X   |     |      |      | X    |      |       |     |
+| mem_rd   | X    |      |     |     |      |      |      |      |       |     |
+| mem_wr   |      |      |     |     |      |      |      |      | X     |     |
+| reg_wr   |      | X    | X   | X   |      |      | X    | X    |       |     |
+| imm_sel  |      | X    |     |     |      |      | X    | X    |       |     |
+| data_sel | X    |      |     |     |      |      |      |      |       |     |
+| dp_en    |      |      |     |     | X    |      |      |      |       |     |
+| halt     |      |      |     |     |      | X    |      |      |       |     |
+
+* Problem 5
+/Review the program you used for lab 5 and so that it no longer has any data
+hazards/.
+
+Here is my lab 5 code.
+
+: 2000 // sub r0, r0, r0 // r0=0
+: 7006 // addi r0, r0, 6 // r0=6
+: 3000 // add r0, r0, r0 // r0=12
+: 3000 // add r0, r0, r0 // r0=24
+: 3000 // add r0, r0, r0 // r0=48
+: 0100 // load x1, 0x30 (#48) (val1)
+: 7001 // addi r0, r0, #1
+: 0200 // load x2, 0x31 (#49) (val2)
+: 7001 // addi r0, r0, #1
+: 0300 // load r3, r0      // r3=*r0(=50) (val3 is an address)
+: 3112 // add x1, x1, x2 (val1 + val2)
+: 8131 // store x1, x3 (assumes store rs, dest format)
+: 3113 // add x1, x1, x3
+: 4111 // disp x1
+: 5000 // halt
+
+This code has very tightly coupled data piplines so many stalls need to be
+inserted to remove hazards.
+
+: 2000 // sub r0, r0, r0 // r0=0
+: 9000 // stal 1
+: 9000 // stal 2
+: 7006 // addi r0, r0, 6 // r0=6
+: 9000 // stal 1
+: 9000 // stal 2
+: 3000 // add r0, r0, r0 // r0=12
+: 9000 // stal 1
+: 9000 // stal 2
+: 3000 // add r0, r0, r0 // r0=24
+: 9000 // stal 1
+: 9000 // stal 2
+: 3000 // add r0, r0, r0 // r0=48
+: 9000 // stal 1
+: 9000 // stal 2
+: 0100 // load x1, 0x30 (#48) (val1)
+: 7001 // addi r0, r0, #1
+: 9000 // stal 1
+: 9000 // stal 2
+: 0200 // load x2, 0x31 (#49) (val2)
+: 7001 // addi r0, r0, #1
+: 9000 // stal 1
+: 9000 // stal 2
+: 0300 // load r3, r0      // r3=*r0(=50) (val3 is an address)
+: 3112 // add x1, x1, x2 (val1 + val2)
+: 9000 // stal 1
+: 9000 // stal 2
+: 8131 // store x1, x3 (assumes store rs, dest format)
+: 3113 // add x1, x1, x3
+: 9000 // stal 1
+: 9000 // stal 2
+: 4111 // disp x1
+: 5000 // halt
+

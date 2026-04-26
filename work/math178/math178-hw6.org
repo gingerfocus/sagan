@@ -1,0 +1,35 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "MATH178 - W25 - Homework 4", columns: 1, author: "Evan Stokdyk")
+
+#set text(16pt)
+#show table: it => align(center)[#it]
+#+END_EXPORT
+
+* Problem 1 
+
+TODO
+
+* Problem 2
+
+TODO
+
+* Problem 3
+
+TODO
+
+* Problem 4
+
+TODO
+
+* Problem 5
+
+TODO
+
+* Problem 6
+
+TODO
+
+* Sources
+
+None

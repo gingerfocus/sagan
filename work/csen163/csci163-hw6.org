@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID: BE716BA0-4DD7-4E67-8AEE-658CDD0E954E
+:END:
+#+title: csci163-hw6
+
+Evan Stokdyk
+
+CSCI 163 - WINTER 2025
+
+Assignment 6
+
+* Problem 1
+
+#+begin_quote
+[!faq] Question
+Design and analyze a transform-conquer algorithm for counting the number of triangles (cycles with three edges) in a graph by reducing it to the problem of matrix multiplication.
+#+end_quote
+
+#+begin_quote
+[!tip] Algorithm 1) Represent the graph as and adjacency matrix A where A[i][j] = 1 means that node i has and edge to j. 2) Cube the graph using matrix multiplication. 3) Return the number of 1s on the diagonal divided by 3.
+#+end_quote
+
+#+begin_quote
+[!qna] Analysis 1) T(n, m) = /Transform/ + 2 x /Multiply/ + /Count/ 2) T(n, m) = O(n + m) + 2O(n^3) + O(n) 3) T(n, m) = O(n^3)
+#+end_quote
+
+* Problem 2
+
+#+begin_quote
+[!faq] Question
+Given n open intervals (a1, b1), (a2, b2), . . . (an, bn) on the real line, each representing start and end times of some activity requiring the same resource, the task is to find the largest number of these intervals so that no two of them overlap. Investigate the three greedy algorithms based on
+
+1) earliest start first
+2) shortest duration first
+3) earliest finish first
+
+For each of the three algorithms, either prove that the algorithm yields an optimal solution or give a counterexample showing this not to be the case.
+#+end_quote
+
+#+begin_quote
+[!tip] Earliest Start
+Consider the input of (1, 5), (2, 3), (3, 4), (4, 5). This greedy algorithm would first select (1, 5) and then be unable to select any other intervals. This in not a correct solution as it obvious that the 3 consecutive intervals can be chosen together.
+#+end_quote
+
+#+begin_quote
+[!tip] Shortest Duration
+Consider the input of (1, 5), (4, 7), (6, 10). The duration of (4, 7) is the shortest but if chosen doesn't allow any other one to be selected. A better solution would be choose the other two. Thus this doesn't yield the optimal solution.
+#+end_quote
+
+#+begin_quote
+[!tip] Earliest Finish
+This results in the correct output. Consider a set where k intervals can be chosen starting at index n. At least k intervals can be chosen starting at index n-1 as it would not remove any options from the list. Therefore, by choosing a earlier end time you always do better or the same as choosing a later end time. If something is better or the same as all other option it is by definition the best.
+#+end_quote

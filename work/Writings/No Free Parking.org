@@ -1,0 +1,267 @@
+:PROPERTIES:
+:ID: 28A03AD8-7A34-416B-B25F-6DB70021A866
+:END:
+#+title: No Free Parking
+
+Evan Stokdyk
+05/24/2024
+Essay 2
+Leither - MW 3:30
+
+/No Free Parking/
+
+* Essay
+Last summer, I traveled to Ireland with five friends for ten days. Each of us
+had two to three summers of work savings. Given the king's ransom spent to
+change continents, price was considered in every decision. We needed to live
+frugally and we had low enough standards of living to select the cheapest option
+whenever possible: trains for travel and hostels for sleeping.
+
+However, our preconceptions were shattered with each new experience as the
+quality of transport and living far exceeded our expectations. They often had
+nicer amenities than the alternative we were familiar with. There were many
+reasons for this enjoyment, one being the communal aspects resulting in a mutual
+respect and communication with others using these shared services. Moreover,
+this encounter was cheaper than a car, more fun than living alone and more
+environmentally friendly than the alternative. This exposed a huge disjoint in
+my expectation and reality. After this, I began to approach public transit (PT)
+more optimistically.
+
+This epiphany was forced under the duress of a different environment. Without
+it, I would have continued to view cars as a necessity. I believe that many
+people live in this disillusioned state and will explore the reasons for why it
+persists. This bias becomes evident when considering solutions to transportation
+emissions: the proposed wide adoption of electric vehicles (EVs).
+
+Each new year we all make resolutions that often do not come to pass. This
+illustrates a desire for positive change alongside the fixation on easy
+solutions. This is further shown by the existence of life hacks which promise to
+bring ease to life from minimal effort. There exists a motive to be part of a
+solution that conflicts with common human laziness. Therefore, an easy and
+effective solution is most desirable. These often are not present in reality. So
+when the truth causes problems to this desire, I hypothesize that people instead
+change how they view the world to justify an easy but not productive solution.
+When people look for "easy" solutions they incorrectly exclude PT as an option
+due to unfamiliarity.
+
+But, it is correct to exclude PT if EVs are not impotent. Carbon Brief, a
+journal funded by the European Climate Foundation, claims that “EVs are
+responsible for considerably lower emissions over their lifetime than
+conventional vehicles” (Harrisson). EVs are better in many ways than traditional
+combustion engine cars and their reduction of emissions is crucial. In addition,
+they offer a long term solution to reduce emissions. They can also reuse
+existing road infrastructure so they are cheap to implement. Someone passionate
+about wanting to change their emissions needs only to start using electric cars.
+Reducing emissions is easy and the effort needed is correspondingly low.
+
+Yet improvements EVs are, they do not compose a complete solution as EVs are not
+effective enough. In addition, there exists a fundamental intuition for this but
+regular drivers choose to ignore it due to poor alternatives. There exists an
+overrepresentation in suggested small changes when approaching transportation
+emissions. Also, personal vehicle electrification alongside improvements to
+power production work but a greater focus on public transport and rail expansion
+and electrification is needed. EVs don't change the car centric status quo which
+makes them appealing to consumers but couples it with poor car infrastructure
+and takes focus away from better solutions. Overall, EVs stark similarities to
+traditional cars make them ineffective tools at combating climate change due to
+their reliance on external infrastructure such as roads, electricity and by
+encouraging more driving.
+
+EVs do offer an improvement from traditional cars but personal vehicles are
+flawed, even an improvement to them is weak compared to any alternative. The
+transport use case of vehicles is fulfilled by light rail as an EV fleet has
+significantly higher than power demand from an LRT (light rail train) line
+providing the same number of passenger kilometers per day and this would
+overexert current infrastructure (Grenier, 392). Even if the electricity was
+produced perfectly clean, it still would have better use cases. Next, freight
+and commuting are better as heavy rail can “more fully integrate the cities from
+Bakersfield to Gilroy with the economy of the Bay Area --- and eventually Southern
+California --- and do so in a way that uses land more sustainably” (SPUR, 9).
+Taking less land is significant as each empty road is land that could have a
+better use. In addition, it perpetuates the cycle of building roads which is
+very expensive. EVs are fine but PT and Rail are better for cities.
+
+EVs are still cars and so they come with all the systemic emission sources that
+combustion cars do. US roads require expensive maintenance; EVs continue the
+need for it and even expand it due to their increased weight making road repairs
+more frequent. “Every dollar spent on private car use imposes a $2.55 cost on
+society. [...] policy measures are taken and infrastructure is built that may
+save the motorist 5 cents per mile, but cost society 10 cents per mile” (Cohen,
+30). The cost comprises a number of factors such as health risks, congestion of
+needed services and shipping, sound and particulate pollution as well as land
+use.
+
+Therefore, I conducted a small research survey to examine this tunnel vision and
+to gauge articulable reasons for preferences for cars. In it I asked a series of
+prying questions about public transport, electric vehicles and transport habits.
+The surveys were anonymous written responses on paper given over the course of a
+day to people I met with. There was a small survey population of 10 so results
+are subject to random bias. Those asked about public transport first said they
+would not own a car in the future and the other group said they would. This
+exact result is why I choose to test against two different groups. People who
+didn't own and would not buy a car used PT more frequently than monthly and
+those who owned a car or planned to buy one had used it monthly or less. People
+who have longer commutes tend to own cars. There was interest in public
+transport but many described it as inconvenient.
+
+This reinforces that cars are the default choice for people as they “generally
+use the same modes and routes from day to day, rather than approaching each
+journey as a utility function to be maximized. Habits rarely change without
+something disrupting the routine” (Klein, 396). Car divers have no reason to not
+drive as their choice is perfectly supported. Therefore, they fabricate
+justifications about their aversion to PT. Driving is not purely bad but its
+existence does not take away from the efficacy of PT. Car drivers often have
+wrong perspectives about PT as their “perceptions of public transport travel
+time sometimes deviate substantially from real travel times” (val Exec, 83).
+This was a concern that was outlined in the survey by 3 people who said they
+used PT monthly, yearly and never. This small sample is possibly indicative of
+naiveness to the efficiency of good transit.
+
+Car transport has many environmental flaws that are often not obvious to someone
+unaware of alternatives. One solution is improved education. Also, policy
+changes could be implemented as “private vehicles also tend to be inefficiently
+priced when considering societal impact. There are many external costs to
+personal vehicle ridership, which are not factored into the price of driving,
+such as congestion, land use consequences, air pollution, greenhouse gas
+pollution, and noise. Without these externalities, the benefits of driving a
+personal vehicle will exceed the personal cost making traffic jams and pollution
+almost unavoidable” (Cohen, 2). By raising prices and reducing subsidies
+alongside increasing subsidies to alternatives would remove the status of cars
+as the default option This would mean that driving would be reserved for
+strictly necessary trips.
+
+Over focus on EVs takes away from other efforts as “directed attention to the
+role of EVs in driving resource extractivism in geographies outside of the city
+and in enclosing urban space at the expense of infrastructures such as bus
+lanes, cycleways and walkable spaces” (Ó Maonaigh). Current policy is only
+interested in one solution. It fails to consider that a complicated problem
+requires a multifaceted solution. Overall, this mindset is evident in how our
+politicians cater to us. Policies claim to bring positive change and ignore any
+needed compromise by funding with debt. There is an expectation of something for
+nothing which on a personal level we know to be impossible yet still expect from
+our lawmakers. Additionally, people can be content with self-detrimental policy
+in their lives as just like lies are justified when the liar is a few steps
+removed from the harm (Ariely), stubborn world views can also inflict harm.
+
+** Bibliography
+Ariely, Dan. Dan Ariely: The (Honest) Truth about Dishonesty. Cognitive Media, 2012.
+
+Cohen, Kathleen. Human Behavior and New Mobility Trends in the United States, Europe, and China. Fondazione Eni Enrico Mattei (FEEM), 2019. JSTOR, http://www.jstor.org/stable/resrep21774. Accessed 13 May 2024.
+
+van Exel, Nicolaas, Jacob Arnold, and Piet Rietveld. “Perceptions of Public Transport Travel Time and Their Effect on Choice-Sets among Car Drivers.” Journal of Transport and Land Use, vol. 2, no. 3/4, 2010, pp. 75--86. JSTOR, http://www.jstor.org/stable/26201639. Accessed 13 May 2024.
+
+Grenier, Agathe, and Shannon Page. “The Impact of Electrified Transport on Local Grid Infrastructure: A Comparison between Electric Cars and Light Rail.” Energy Policy, vol. 49, Oct. 2012, pp. 355--64. EBSCOhost, https://doi-org.libproxy.scu.edu/10.1016/j.enpol.2012.06.033.
+
+Harrisson, Thomas. “Factcheck: How Electric Vehicles Help to Tackle Climate Change.” Carbon Brief, 1 Nov. 2023, www.carbonbrief.org/factcheck-how-electric-vehicles-help-to-tackle-climate-change/.
+
+Klein, Nicholas J., and Michael J. Smart. “Life Events, Poverty, and Car Ownership in the United States: A Mobility Biography Approach.” Journal of Transport and Land Use, vol. 12, no. 1, 2019, pp. 395--418. JSTOR, https://www.jstor.org/stable/26911275. Accessed 13 May 2024.
+
+Litman, T. (2019). Autonomous Vehicle Implementation Predictions: Implications for Transport Planning (p. 39). Retrieved from Victoria Transport Policy Institute website: https://www.vtpi.org/avip.pdf.
+
+Ó Maonaigh, Conchúr. “Cross-Class Alliances and the Rise of Electric Vehicles in Dublin.” Human Geography, vol. 16, no. 3, Nov. 2023, pp. 260--72. EBSCOhost, https://doi-org.libproxy.scu.edu/10.1177/19427786231172130.
+
+Paine, Frank T., et al. “Consumer Attitudes toward Auto versus Public Transport Alternatives.” Journal of Applied Psychology, vol. 53, no. 6, Dec. 1969, pp. 472--80. EBSCOhost, https://doi-org.libproxy.scu.edu/10.1037/h0028670.
+
+SPUR (San Francisco Bay Area Planning and Urban Research Association). Harnessing High-Speed Rail: How California and Its Cities Can Use Rail to Reshape Their Growth. SPUR (San Francisco Bay Area Planning and Urban Research Association), 2017. JSTOR, http://www.jstor.org/stable/resrep22937. Accessed 14 May 2024.
+
+* Stylistic Choice
+I use the first person in this a lot which is uncommon. I found myself writing that way attempting to describe the research project and attempting to parse the results and end up making ideas on how that result could have happened. When I do that I feel the need to specify that it is my belief which is hard to do without the first person. Therefore, I choose to embrace it by using a personal story at the start of the essay.
+
+* Improvements
+** Referenced
+Fox, Nick J. “Green Capitalism, Climate Change and the Technological Fix: A More-than-Human Assessment.” Sociological Review, vol. 71, no. 5, Sept. 2023, pp. 1115--34. EBSCOhost, https://doi-org.libproxy.scu.edu/10.1177/00380261221121232.
+eval: Total 8 (Scholarly Source), Authors 2, Writing 2, Support 2, Publication 2
+author: Nick J Fox is a professor of sociology at University of Huddersfield with many published sociology papers.
+link:https://login.libproxy.scu.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=ssf&AN=172000313&site=ehost-live&scope=site
+The article talks about how the free market will not make the correct decisions just on market forces using electric cars as an example
+
+** Footnotes to follow
+Kenyon, S. and G. Lyons. 2003. ăe value of integrated multimodal information and its potential contribution to modal change. Transportation Research Part F, 6:1--21.
+Kingham, S., J. Dickinson, and S. Copsey. 2001. Travelling to work: Will people move out of their cars? Transport Policy B, 8(151--160).
+
+** Random Links
+https://www.jstor.org/stable/23289469
+https://www.jstor.org/stable/26202707
+https://www.jstor.org/stable/j.ctvp2n3pr.14
+https://www.jstor.org/stable/23016641
+https://www.jstor.org/stable/resrep25849.4
+https://www.jstor.org/stable/resrep51363.6
+https://www.jstor.org/stable/resrep24131
+https://www.jstor.org/stable/resrep43255.5
+https://jtlu.org/index.php/jtlu
+https://www.sciencedirect.com/science/article/abs/pii/S0967070X07000522
+
+* Transit Survey
+** Test 1
+Do you own (or regularly use someone else's) car? [ ] yes | [ ] no About how many miles you drive a week? | Do you plan to buy a car after college? | | On a scale of 1-10 how effective do you think electric cars are at combating climate change? 1 2 3 4 5 6 7 8 9 10 How often do you use public transit? Daily Weekly Monthly Yearly Never How far are your frequent trips? ________________________ For a given trip, what would make you want to use (or not use) public transportation? Anything to add?
+
+** Test 2
+How often do you use public transit? - Daily Weekly Monthly Yearly Never
+
+How far are your frequent trips? ________________________
+
+For a given trip, what would make you want to use (or not use) public transportation?
+
+Do you own (or regularly use someone else's) car? - [ ] yes | About how many miles you drive a week? - [ ] no | Do you plan to buy a car after college?
+
+On a scale of 1-10 how effective do you think electric cars are at combating climate change? 1 2 3 4 5 6 7 8 9 10
+
+Anything to add?
+
+** Interview Cover Sheet
+Interviewer: Evan Stokdyk
+Interview Date: 5/17/2024
+Interview Time: 12:00am-6:00pm
+Type of Interview: Formal Fixed-Response
+Topic: Transportation Perceptions
+Method of Record: Notes
+Goals: To gauge articulate reasons for preference towards electric cars.
+
+** Data
+*** Set 1 - PT First
+
+| X   | PT?     | Commute?   | Why PT?                                                      | Own a Car? | Miles? | Buy Car? | EVs Good? |
+|-----+---------+------------+--------------------------------------------------------------+------------+--------+----------+-----------|
+| 1   | Monthly | 12 Miles   | Closer to me, Shorter Commute                                | Yes        | 60     | X        | 6         |
+| 2   | Weekly  | 2 Miles    | How close the transit stops are to my origin and destination | No         | X      | No       | 7         |
+| 3   | Never   | To SF      | If I have access to a car I probably wont                    | Yes        | 1.5    | X        | 7         |
+| 4   | Monthly | 5 min walk | Safety                                                       | No         | X      | No       | 5         |
+| 5   | Daily   | 7.1 miles  | Convenient because I don't have to drive                     | No         | X      | No       | 1         |
+| Avg |         |            |                                                              | 40%        | 31     | 0%       | 5.2       |
+
+*** Set 2 - Cars First
+
+| X   | Own a Car? | Miles?  | Buy Car? | EVs Good? | PT?     | Commute?          | Why PT?                                                              |
+|-----+------------+---------+----------+-----------+---------+-------------------+----------------------------------------------------------------------|
+| 1   | Yes        | 2 Miles | X        | 6         | Never   | 3 Miles           | Not clean/well maintained. Bad time chart and inconsisstant + delays |
+| 2   | No         | X       | Yes      | Nan       | Monthly | 12 Miles          | Price, Time                                                          |
+| 3   | No         | X       | Yes      | 4         | Monthly | 10-15 minute Walk | Price                                                                |
+| 4   | Yes        | 75      | X        | 6         | Monthly | 600 meters        | no parking problem                                                   |
+| 5   | No         | X       | Yes      | 6         | Yearly  | 50-100 miles      | Time too long                                                        |
+| Avg | 40%        | 38.5    | 100%     | 5.5       |         |                   |                                                                      |
+
+- Survey Report
+  Surveyor: Evan Stokdyk
+  Survey Date: 5/17/2024
+  Survey Time: Afternoon
+  Type of Survey: Both Fixed Response Questions and Open-ended Questions
+  Survey Format: Written
+  Number of Questions: 7
+  Number of Respondents: 10
+  Survey Location: Campus Library and Benson
+
+** Results
+
+| X   | Own a Car? | Miles? | Buy Car? | EVs Good? |
+|-----+------------+--------+----------+-----------|
+| Avg | 40%        | 34.75  | 50%      | 5.35      |
+
+Reasons that would make PT better: - Decrease Time, Better Stop, Cheaper, Faster, More Safe
+
+** Notes
+
+In this small of a sample, it is hard to tell if there was any effect in the way the questions where asked. However, everyone who was asked about public transport first said they would not own a car in the future and the other group said they would. This exact result is why I choose to give two different versions but with a sample this small it is hard to draw any conclusions.
+
+People who have longer commutes tend to own cars and people who's commutes are across campus tend to not own a car. Most people who drive only are driving a very small amount but verbally expressed aspirations of longer trips. People generally expressed an interest in public transport but found much of it to be inconvenient and expressed that it different ways.
+
+Overall, people said they were generally positive about electric cars. Almost all the answers where a 5, 6 or 7. I think this was a problem of the survey as the question was too direct and controversial. This made people think that there was a correct answer to the question rather than answering what they thought. Two different people wanted to look it up on their phone. I think this demonstrates what I thought and that people have an idea but electric cars but lack a motive for research further.

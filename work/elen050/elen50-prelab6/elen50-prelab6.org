@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID: 1C3C4566-93E8-435B-B936-56E2C909B30F
+:END:
+#+title: elen50-prelab6
+
+** Circuit Analysis
+![[file:ecen050-prelab6_250518_214846.jpg.org][name|1200]]
+
+** Matlab
+#+begin_src matlab
+clear
+close all
+clc
+
+#  Part 1
+# Vs = 2.0;
+# 
+# c1 = 1.0;
+# c2 = 2.2;
+# c3 = 4.7;
+# 
+# ceq = 1 / ( (1/c1) + (1/c2) + (1/c3));
+# 
+# v1 = ceq * Vs / c1
+# v2 = ceq * Vs / c2
+# v3 = ceq * Vs / c3
+# 
+ Part 2
+r1 = 500;
+r2 = 750;
+C = 1e-6;
+
+t1 = r1 * C
+t2 = r2 * C
+#+end_src

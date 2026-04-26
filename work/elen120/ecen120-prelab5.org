@@ -1,0 +1,69 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Prelab 4", columns: 1, author: "Evan Stokdyk")
+
+// #show table: it => align(center)[#it]
+// #show raw: set text(9pt)
+
+// Textbook: Chapter 11 & 15
+// Handbook: Section 27. Sections 12 and 8.
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+/Go through my program and try to understand how I am configuring the interrupt registers in exti3_init./
+
+The program goes throught these steps:
++ Sets SYSCFGEN of RCC_APB2ENR
+  + enables SYSCFG block clock
++ Clears #0x00007000 from SYSCFG_EXTICR0
+  + select PA.3 and the trigger for EXTI3
+  + This is the default anyway
++ Sets RT3 of EXTI_RTSR1
+  + enables rising edge trigger for EXTI3		
++ Sets FT3 of EXTI_FTSR1
+  + disable falling edge trigger for EXTI3		
+  + also the default
++ Sets IM3 in EXTI_IMR1
+  + enable EXTI3 interrupt (unmask)
++ Sets bit 9 in NVIC_ISER0
+  + enable the EXTI3 interrupt in NVIC_ISER0
+
+* Problem 2
+/On Register Maps, using the register diagrams, X out any bits that I am clearing and circle any bits that I am setting./
+
++ On page 246, bit 0 is set to 1.
++ At the top of page 335, bit 3 is set to 1.
++ At the bot of page 335, bit 3 is set to 0.
++ At the top of page 334, bit 3 is set to 1.
+
+* Problem 3
+/What does the Timer Project do?/
+
+This program toggles the red led every second.
+
+The timer project configures the timer such that each tick coresponds to 4000
+clock cycles. It then sets up the interupt to happen every 1000 ticks. This
+allows the IRQ to be ran every 1 second.
+
+The IRQ toggels the red led and then resets the IRQ so that it does not trigger.
+It then prevents any pipelined memory access with the `dsb` function before
+returning as this function will likely return to a very different control flow
+context.
+
+* Problem 4
+/Write out a plan to complete each of the problems in Lab 4./
+
+Problem 1 can be done by copying the code that configures the first interupt up
+pin so that it can now works for the center pin. That way it will be possible to
+get the led to light up when the interupt triggers.
+
+For problem 2, the process will be very similar but the interupt value will need
+to be checked before the led changing function is run. This will require writing
+a new program to act as the irq. This program will similarly now be responsible
+for all the things.
+
+Problem 3 requires modifing code and then connecting the board to an ociliscope.
+This will nessisarly require finidng out the physcial location of each pin and a
+ground pin for the board such that the osciliscope and board can share.

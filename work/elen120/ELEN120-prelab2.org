@@ -1,0 +1,45 @@
+#+OPTIONS: toc:nil
+
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Prelab 2", columns: 1, author: "Evan Stokdyk")
+#+END_EXPORT
+
+* Deliverables
+In the lab, we will trace the execution of ARM assembly programs and write new
+ones. For part 1, the code needs to be built and walked through to answer
+questions. In the subsequent parts we need to write arm code to solve different
+problems.
+
+* Code
+#+BEGIN_SRC c
+int arr[] = {6,7,8,9,10,11,12,13,14,15,16,17};
+int main() {
+    for (i= 1; i < 7; i++)
+        arr[i] = arr[i] + 5;
+}
+#+END_SRC
+/Modified code from problem 2 of lab handout/
+
+Given the provided C code above, the final value of arr can be calculated by
+hand to be:
+
+#+BEGIN_SRC c
+int arr[] = {6,12,13,14,15,16,17,13,14,15,16,17};
+#+END_SRC
+
+* Calculations
+In the lab, we will write a program to square and sum elements in an array. To
+aid the lab, these values can be compared to a calculated value.
+
+The array is defined as:
+#+BEGIN_SRC asm
+array DCD 1, -5, 2, 1, 1, 0, 10, 0, -2, -1
+#+END_SRC
+
+Thus its sum ($S$) is:
+$ S = 1^2 + (-5)^2 + 2^2 + 1^1 + 1^1 \
+  + 0^2 + 10^2 + 0^2 + (-2)^2 + (-1)^2 $
+$ S = 1 + 25 + 4 + 1 + 1 + 0 + 100 + 0 + 4 + 1 $
+$ S = 30 + 2 + 105 = 137 $
+

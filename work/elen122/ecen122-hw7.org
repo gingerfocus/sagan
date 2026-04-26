@@ -1,0 +1,60 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN122 - Homework 7", columns: 1, author: "Evan Stokdyk")
+
+// #set text(16pt)
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+#+begin_src c
+for(i=0;i<1000;i++)
+    for(j=0;j<1000;j++)
+        accum = accum + arr[j*1000+i]
+#+end_src
+
+Temporal locality:
++ [ ] i
++ [X] j
++ [X] accum
++ [ ] each element of arr
+
+This code can be rewriten to maximize spatial locality while keeping behavior
+the same.
+
+#+begin_src c
+for(i=0;i<1000;i++)
+    for(j=0;j<1000;j++)
+        accum = accum + arr[i*1000+j]
+#+end_src
+
+This makes it so that the elements of arr are accessed in sequence. This makes
+them more likely to be in the same page line.
+
+* Problem 2
+|   Tag | Index | Offset |
+| 31-16 |  15-6 |    5-0 |
+
+The cache block size is determined by the offset. Therefore, a 6 bit offset
+means that that the block size is $2^6$ or 64 bytes.
+
+The number of blocks is determined by the index. In this case the index is 10
+bits which makes the number of blocks $2^10$ or 1024 blocks.
+
+To store all this data we need 1 bit for active 16 tag bits and 64 bits of data
+for 1024 blocks. This is $(1 + 16 + 64) dot 1024 = 82944$.
+
+| order | Addr     |              Tag |      Index | Offset | Hit  | Bounce |
+|     1 | deadbeef | 1101111010101101 | 1011111011 | 101111 | miss |        |
+|     2 | 00c0ffee | 0000000011000000 | 1111111111 | 101110 | miss |        |
+|     3 | deadbef6 | 1101111010101101 | 1011111011 | 110110 | miss | yes    |
+|     4 | 00c07fae | 0000000011000000 | 0111111110 | 101110 | miss |        |
+|     5 | 00c0ffe0 | 0000000011000000 | 0111111111 | 100000 | miss |        |
+|     6 | deafbee0 | 1101111010101111 | 1011111011 | 100000 | miss | yes    |
+|     7 | 00e07fae | 0000000011100000 | 0111111110 | 101110 | miss | yes    |
+|     8 | deafbee4 | 1101111010101111 | 1011111011 | 100100 | yes  |        |
+
+As you can see 3 cache blocks are replaced.

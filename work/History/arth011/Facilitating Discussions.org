@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID: BBFB3C65-1B23-48C9-A51D-F1265DEC5C26
+:END:
+#+title: Facilitating Discussions
+
+To compile:
+
+#+begin_src sh
+cat $FILE | pandoc -o facilitating-discussions.doc
+#+end_src
+
+Evan Stokdyk
+Due: 1/17/24
+​## Key Takeaways
+​### Art Andes (p. 36-49)
+This article talks about the of the influence behind the creation and the culture of the Andean cultural site Chavin de Huántar. The labyrinthine temple was created as a spiritual place to separate those inside the cult and those outside. The article also contains specific analysis about the carvings inside and how they act as metaphors that lend insight to the culture that created them.
+
+*** Scher's Complexity and Vision
+This article talks about the complex and esoteric depiction of the Staff God at Chavín de Huántar. These convey the spiritual beliefs to only the believers while keeping outsiders out because it requires a specific understanding of the imagery. The article also highlights how this artistic tradition spread throughout Peru.
+
+** Important Content
+*** Art Andes (p. 36-49)
+- The temple served as a pilgrimage and cultural hub for the surrounding area despite its remoteness.
+- The site was geography positioned well such that it was flat, had the necessary materials nearby yet was still out of the way for most people.
+- The ideas created here both cultural, architecturally and in art persist for thousands of years across the Andes.
+- A considerable amount of engineering was needed to prevent the structure from falling over due to its height and poor materials.
+- Ceremonial objects often contain some usefulness.
+  ​### Scher's Complexity and Vision
+- The temple carvings are made intentionally vague so only believers can interpret them correctly.
+- The materials used in the construction shows the existence of cross continent trade when it was created around 1100-500 BCE.
+- Images are designed to be interpreted many ways with only one being the 'correct' one in the followers eyes.
+- Depictions of exotic known things are used to make the unknown characters appear more powerful and worth of reverence.
+- The specific depictions of the staff god is replicated across the Andes showing the reach of these cultures.
+  ​## Questions
+- How, if at all, do you thing the fact that "the approach to the Temple was purposefully circuitous" (Stone, 38), affect the appeal as a pilgrimage site?
+- Why do you think this cult choose to exclude people with complexity in the creations? What modern parallels can be drawn to the practice of 'gate-keeping'?
+- In what ways do you see these stylistic choices reappear in present art? What are some modern examples of 'visual metaphoric substitution'?
+
+** Reference
+source: https://cdn.kastatic.org/ka-perseus-images/ae19bb9aa1d0ada89510a4091f375c54611820b8.jpg
+
+/Carving on Foreign Medium/

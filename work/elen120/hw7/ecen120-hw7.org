@@ -1,0 +1,24 @@
+#+BEGIN_EXPORT typst
+#import "@local/pset:0.1.0" as pset
+#show: pset.ieee.with(title: "ECEN120 - Homework 5", columns: 1, author: "Evan Stokdyk")
+
+#show table: it => align(center)[#it]
+#show raw: set text(9pt)
+#show raw: it => align(center)[#it]
+#+END_EXPORT
+
+#+OPTIONS: toc:nil
+
+* Problem 1
+This program implements selection sort.
+
+#+BEGIN_EXPORT typst
+#raw(read("p1.asm"), block: true, lang: "asm")
+#+END_EXPORT
+
+* Problem 2
+This program sorts a list of strings.
+
+#+BEGIN_EXPORT typst
+#raw(read("p2.asm"), block: true, lang: "asm")
+#+END_EXPORT
