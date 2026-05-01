@@ -19,8 +19,10 @@
 *.mp4
 *.MOV
 *.mov
-*.bak
 *.m4a
+
+scan1
+scan2
 
 work/csen062/hw/7/clean-data.csv
 work/csen020/src/Lab6C-Main.c
@@ -34,4 +36,3 @@ bin
 **/zig-out
 **/.direnv
 **/build
-
