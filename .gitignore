@@ -8,17 +8,19 @@
 *.pdf
 *.png
 *.zip
+
 *.jpg
+*.JPG
+
 *.docx
 *.gif
-*.JPG
 *.xlsx
 *.mp4
 *.MOV
 *.mov
 *.m4a
 
-work/gnu-asm
+code/gnu-asm
 work/csen062/hw/7/clean-data.csv
 work/csen020/src/Lab6C-Main.c
 work/elen122/hw4/ecen122-hw4-p4.svg
