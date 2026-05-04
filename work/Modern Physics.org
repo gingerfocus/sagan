@@ -77,7 +77,7 @@ Introducing, the 3rd momentum fakeout. More to come, you never know with this.
 
 We can do more things to show something cool - \(F = dp / dt\) - \(W = \int^{x_2}_{x_1}{Fdx}\) - \(W = \int^{x_2}_{x_1}{\frac{d}{dt} \gamma mv dx}\) - \(W = \int^{x_2}_{x_1}{\frac{d}{dt} \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}} dx}\) - \(K= \gamma mc^2 - mc^2\) - \(E = K + mc^2 = \gamma mc^2\) - \(E^2 = p^2c^2 + (mc^2)^2\)
 
-​#todo [[file:relative-momentum-derivation.jpg.org][relative-momentum-derivation.jpg]]
+#todo [[file:relative-momentum-derivation.jpg.org][relative-momentum-derivation.jpg]]
 
 So when p=0 and \(\gamma\)=1 this is Einstein's derivation with most of the steps skipped. Go and time travel back to 1923 to claim your noble prize.
 
@@ -91,7 +91,6 @@ In a space time graph (an x-y graph of space vs time) there is a thing called a 
 Mirai Nikki
 
 * Black Holes
-​#todo
 swarzchild radius
 
 * Duality
@@ -157,11 +156,11 @@ This bridged the gap between the wave mathematics and the particle observation.
 In the double-slit experiment, what happens if you fire electrons one by one, but place a *detector* at the slits to see which one the electron goes through?
 ?
 The *Interference Pattern disappears*.
-​* *Unobserved:* Electrons act as [[file:waves.org][waves]], interfering with themselves to create a striped pattern.
-​* *Observed:* The act of measurement collapses the wave function; electrons act as particles and form two distinct clumps (clumps corresponding to Slit A and Slit B).
++ *Unobserved:* Electrons act as [[file:waves.org][waves]], interfering with themselves to create a striped pattern.
++ *Observed:* The act of measurement collapses the wave function; electrons act as particles and form two distinct clumps (clumps corresponding to Slit A and Slit B).
 
 What is *Niels Bohr's* principle regarding the observation of wave and particle properties?
 ?
-*The Principle of Complementarity*.
+The Principle of Complementarity.
 It states that objects have complementary properties (like wave behavior and particle behavior) which cannot be observed or measured *simultaneously*.
 The experimental setup determines which property is manifested; you can see the wave /or/ the particle, but never both at the exact same time.

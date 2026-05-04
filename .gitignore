@@ -1,8 +1,5 @@
 /.direnv
-/work/gnu-asm
-
-.opencode/
-.consolidated/
+/.opencode/
 
 # compiled objects
 *.o
@@ -21,14 +18,13 @@
 *.mov
 *.m4a
 
-scan1
-scan2
-
+work/gnu-asm
 work/csen062/hw/7/clean-data.csv
 work/csen020/src/Lab6C-Main.c
 work/elen122/hw4/ecen122-hw4-p4.svg
 
-# !**/*.sagan.md
+!**/*.sagan.md
+**/.consolidated/
 
 # binary files
 bin

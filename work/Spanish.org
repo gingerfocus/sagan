@@ -3,6 +3,9 @@
 :END:
 #+title: Spanish
 
-Right now I am mostlyjust using Doolingoto help me study but I am not that happy with it.
+Right now I am mostly just using Doolingoto help me study but I am not that
+happy with it.
 
-I think there are some strange feed back loops that make it harder for me to keep my skills. I don't practice which causes me to get worse which hurts my self confidence.
+I think there are some strange feed back loops that make it harder for me to
+keep my skills. I don't practice which causes me to get worse which hurts my
+self confidence.
