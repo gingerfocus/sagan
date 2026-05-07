@@ -98,7 +98,7 @@ nonz, nonz, nonz, zero, zero, zero, zero, zero, nonz, zero, zero, zero, zero, ze
 )$
 ]
 
-Based on this visual it is likly that the matrix will respond will to BBD
+Based on this visual it is likly that the matrix will respond well to BBD
 parellization.
 
 #h(1fr) $ballot$
@@ -190,7 +190,7 @@ $
 $
 
 #let links2 = (
-    (2, 18),   (2, 14), (2, 17), 
+    (2, 18),   (2, 14), (2, 17),
     (14, 17), (14, 18), (17, 18),
 );
 
@@ -400,7 +400,7 @@ digraph RootedTree {
 
     // shape=cirle;
     // Styling the root node specifically
-    // 
+    //
     node [shape=circle, width=0.3, fixedsize=true] // , style=filled, color=lightblue];
     edge [arrowsize=0.6]
 
@@ -547,7 +547,7 @@ subsituting we get:
 $
 
     p' = [1, 3, 4, 5, 13, 14, 6, 12, 10] \
-    p = [13, 10, 6, 4, 5, 12, 1, 3, 14]\ 
+    p = [13, 10, 6, 4, 5, 12, 1, 3, 14]\
     p = [2, 7, 11, 15 | 13, 10, 6, 4, 5, 12, 1, 3, 14 | 8, 9]
 $
 
